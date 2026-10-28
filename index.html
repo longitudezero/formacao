@@ -451,6 +451,40 @@ body:has(.product-dialog[open]) { overflow: hidden; }
 .study-indicator { display: flex; flex-direction: column; gap: 7px; border-top: 1px solid var(--gold-faint); margin-top: auto; padding-top: 18px; }
 .study-indicator span { font-size: 9px; color: #a28b5c; letter-spacing: .17em; font-weight: 700; }
 .study-indicator strong { font-size: 12px; color: #625749; font-weight: 600; }
+/* Four editorial objective panels, each explaining a specific CHANEL goal. */
+.objective-card { position: relative; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.objective-card:hover, .objective-card:focus-within { transform: translateY(-3px); border-color: #c4a16b; box-shadow: 0 15px 34px rgba(50, 39, 23, .08); }
+.objective-open { appearance: none; position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; background: transparent; cursor: pointer; }
+.objective-open:focus-visible { outline: 3px solid #b58d4e; outline-offset: -5px; }
+.objective-dialog { width: min(1100px, 95vw); }
+.objective-dialog-layout { grid-template-columns: minmax(0, 39%) minmax(0, 61%); }
+.objective-dialog-art { position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 40px clamp(28px, 3.6vw, 53px); background: #24211d; color: #eee7da; overflow: hidden; }
+.objective-dialog-art::before { content: ''; position: absolute; width: 135%; aspect-ratio: 1; border: 1px solid rgba(202, 176, 120, .22); border-radius: 50%; left: -55%; top: 12%; pointer-events: none; }
+.objective-dialog-art::after { content: ''; position: absolute; width: 85%; aspect-ratio: 1; border: 1px solid rgba(202, 176, 120, .13); border-radius: 50%; right: -44%; bottom: -10%; pointer-events: none; }
+.objective-art-top, .objective-art-bottom { position: relative; z-index: 1; color: #d2b780; font-size: 10px; font-weight: 700; letter-spacing: .16em; line-height: 1.7; }
+.objective-art-core { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 20px; }
+.objective-art-number { font-family: var(--serif); font-size: clamp(94px, 10vw, 144px); line-height: .72; color: rgba(215, 194, 152, .18); font-weight: 400; }
+.objective-art-name { max-width: 100%; font-family: var(--serif); font-size: clamp(44px, 5vw, 68px); line-height: .96; font-weight: 400; letter-spacing: -.05em; overflow-wrap: anywhere; }
+.objective-art-rule { width: 84px; height: 1px; background: #b9975b; }
+.objective-dialog-copy { padding-top: 57px; }
+.objective-dialog-copy h2 { font-size: clamp(43px, 4.45vw, 61px); line-height: 1.02; margin-bottom: 21px; }
+.objective-dialog-copy .dialog-description { font-size: 13px; line-height: 1.78; margin-bottom: 20px; }
+.objective-dialog-copy .dialog-list { margin-bottom: 18px; }
+.objective-dialog-copy .dialog-list li { font-size: 12px; line-height: 1.62; margin-bottom: 9px; }
+.objective-dialog-copy .dialog-takeaway { margin-bottom: 17px; }
+.objective-dialog-metrics { margin: 0 0 20px; font-size: 11px; line-height: 1.75; color: #766b5b; }
+.objective-dialog-metrics strong { color: #795f34; }
+@media (max-width: 760px) {
+  .objective-dialog { width: min(540px, 94vw); max-height: 92dvh; overflow-y: auto; }
+  .objective-dialog-layout { display: flex; flex-direction: column; height: auto; max-height: none; }
+  .objective-dialog-art { min-height: 184px; padding: 22px 29px; }
+  .objective-art-core { gap: 9px; }
+  .objective-art-number { font-size: 49px; }
+  .objective-art-name { font-size: clamp(32px, 8vw, 42px); }
+  .objective-art-rule, .objective-art-bottom { display: none; }
+  .objective-dialog-copy { padding: 57px 28px 28px; overflow: visible; }
+  .objective-dialog-copy h2 { font-size: clamp(37px, 9vw, 49px); }
+}
 .competitor-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .competitor-card { background: #fffefa; border: 1px solid #e7ddc9; padding: 32px 34px 25px; min-height: 290px; display: flex; flex-direction: column; }
 .competitor-card h3 { margin: 25px 0 13px; font-family: var(--serif); font-size: clamp(42px, 4vw, 56px); line-height: 1; font-weight: 500; letter-spacing: -.025em; }
@@ -1078,14 +1112,35 @@ body:has(.product-dialog[open]) { overflow: hidden; }
         <div class="study-intro reveal">
           <p class="mini-label">QUESTÃO 04 · O QUE PRETENDE A MARCA ALCANÇAR?</p>
           <h2 id="objetivos-title" class="section-title">Objetivos de <em>comunicação.</em></h2>
-          <p>Para uma marca de luxo, a gestão digital deve equilibrar notoriedade, exclusividade, aproximação a novas gerações e resultados comerciais. Propomos quatro objetivos complementares.</p>
+          <p>Para responder ao que a CHANEL pretende alcançar nas redes sociais, escolhemos quatro objetivos concretos: dar maior visibilidade aos seus códigos, proteger o prestígio da Maison, aproximar públicos jovens e transformar interesse em visitas às suas coleções.</p>
         </div>
         <div class="objectives-grid">
-          <article class="objective-card reveal"><span class="study-index">01 / NOTORIEDADE</span><h3>Reforçar o reconhecimento global</h3><p>Aumentar a visibilidade da CHANEL junto de públicos atuais e potenciais, mantendo uma imagem coerente.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Alcance · visualizações · menções</strong></div></article>
-          <article class="objective-card reveal"><span class="study-index">02 / IDENTIDADE</span><h3>Preservar a exclusividade</h3><p>Valorizar a história, o saber-fazer artesanal e a qualidade, sem transformar a comunicação numa sucessão de promoções.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Partilhas · guardados · comentários</strong></div></article>
-          <article class="objective-card reveal"><span class="study-index">03 / NOVOS PÚBLICOS</span><h3>Conquistar novas gerações</h3><p>Usar vídeos curtos e conteúdos relevantes para despertar interesse entre jovens adultos, sobretudo no universo da beleza.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Retenção dos vídeos · interação jovem</strong></div></article>
-          <article class="objective-card reveal"><span class="study-index">04 / TRÁFEGO</span><h3>Gerar visitas qualificadas</h3><p>Orientar pessoas interessadas para o website oficial e para as boutiques, aproximando a comunicação da intenção de compra.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Cliques · visitas · conversões</strong></div></article>
+          <article class="objective-card reveal"><span class="study-index">01 / NOTORIEDADE</span><h3>Reforçar o reconhecimento global</h3><p>Aumentar a visibilidade da CHANEL junto de públicos atuais e potenciais, mantendo uma imagem coerente.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Alcance · visualizações · menções</strong></div><button type="button" class="objective-open" data-objective="notoriedade" aria-haspopup="dialog" aria-controls="objective-dialog" aria-label="Conhecer a justificação do objetivo de notoriedade"></button></article>
+          <article class="objective-card reveal"><span class="study-index">02 / IDENTIDADE</span><h3>Preservar a exclusividade</h3><p>Valorizar a história, o saber-fazer artesanal e a qualidade, sem transformar a comunicação numa sucessão de promoções.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Partilhas · guardados · comentários</strong></div><button type="button" class="objective-open" data-objective="identidade" aria-haspopup="dialog" aria-controls="objective-dialog" aria-label="Conhecer a justificação do objetivo de exclusividade"></button></article>
+          <article class="objective-card reveal"><span class="study-index">03 / NOVOS PÚBLICOS</span><h3>Conquistar novas gerações</h3><p>Usar vídeos curtos e conteúdos relevantes para despertar interesse entre jovens adultos, sobretudo no universo da beleza.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Retenção dos vídeos · interação jovem</strong></div><button type="button" class="objective-open" data-objective="geracoes" aria-haspopup="dialog" aria-controls="objective-dialog" aria-label="Conhecer a justificação do objetivo de conquistar novas gerações"></button></article>
+          <article class="objective-card reveal"><span class="study-index">04 / TRÁFEGO</span><h3>Gerar visitas qualificadas</h3><p>Orientar pessoas interessadas para o website oficial e para as boutiques, aproximando a comunicação da intenção de compra.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Cliques · visitas · conversões</strong></div><button type="button" class="objective-open" data-objective="trafego" aria-haspopup="dialog" aria-controls="objective-dialog" aria-label="Conhecer a justificação do objetivo de gerar visitas qualificadas"></button></article>
         </div>
+        <dialog id="objective-dialog" class="product-dialog objective-dialog" aria-labelledby="objective-dialog-title" aria-describedby="objective-dialog-description">
+          <div class="product-dialog-layout objective-dialog-layout">
+            <div class="objective-dialog-art" aria-hidden="true">
+              <span class="objective-art-top">ETAPA 1 · QUESTÃO 04</span>
+              <div class="objective-art-core"><span id="objective-art-number" class="objective-art-number">01</span><span id="objective-art-name" class="objective-art-name">Notoriedade</span><span class="objective-art-rule"></span></div>
+              <span class="objective-art-bottom">CHANEL × REDES SOCIAIS<br />OBJETIVOS DA ESTRATÉGIA</span>
+            </div>
+            <div class="dialog-copy objective-dialog-copy">
+              <button type="button" id="objective-dialog-close" class="dialog-close" aria-label="Fechar objetivo de comunicação">FECHAR <span aria-hidden="true">×</span></button>
+              <p id="objective-dialog-eyebrow" class="mini-label">OBJETIVO 01 / 04 · NOTORIEDADE</p>
+              <h2 id="objective-dialog-title">Reforçar o reconhecimento global</h2>
+              <div class="gold-divider"></div>
+              <p id="objective-dialog-description" class="dialog-description"></p>
+              <h3 class="dialog-subheading">PORQUE ESCOLHEMOS ESTE OBJETIVO?</h3>
+              <ul id="objective-dialog-list" class="dialog-list"></ul>
+              <p id="objective-dialog-takeaway" class="dialog-takeaway"></p>
+              <p id="objective-dialog-metrics" class="objective-dialog-metrics"></p>
+              <div class="dialog-footer"><span>TRABALHO DE GRUPO · ETAPA 01</span><button type="button" id="objective-dialog-next">VER OUTRO OBJETIVO <span aria-hidden="true">→</span></button></div>
+            </div>
+          </div>
+        </dialog>
         <a href="#concorrentes" class="next-chapter reveal"><span>PONTO SEGUINTE</span><span class="next-line"></span><strong>05 — PRINCIPAIS CONCORRENTES</strong><span aria-hidden="true">↘</span></a>
       </section>
 
@@ -1766,6 +1821,110 @@ competitorDialog.addEventListener('click', (event) => {
   if (event.target === competitorDialog) competitorDialog.close();
 });
 competitorDialog.addEventListener('close', () => competitorPriorFocus?.focus());
+
+// Objective panels answer what CHANEL is trying to achieve and why these four goals were chosen.
+const objectiveDetails = {
+  notoriedade: {
+    number: '01', category: 'NOTORIEDADE', artName: 'Notoriedade',
+    title: 'Reforçar o reconhecimento global',
+    description: 'Escolhemos a notoriedade porque queremos que mais pessoas reconheçam a CHANEL quando encontram conteúdos de moda e beleza. A proposta é dar maior visibilidade aos códigos da Maison — o tweed, a camélia, as malas acolchoadas e o CHANEL N°5 — sem perder a identidade visual que a distingue.',
+    reasons: [
+      ['Mostrar os ícones', 'Usar carrosséis de peças emblemáticas, imagens de campanhas e pormenores das coleções para associar imediatamente esses elementos à CHANEL.'],
+      ['Alargar a descoberta', 'Publicar Reels de desfiles no Instagram e vídeos curtos de bastidores no TikTok para alcançar também quem ainda não segue a marca.'],
+      ['Criar memória de marca', 'Repetir cores, símbolos e linguagem editorial de forma consistente, para que o conteúdo seja identificado como CHANEL mesmo fora do perfil oficial.']
+    ],
+    result: 'Que os públicos atuais e potenciais reconheçam a CHANEL e se lembrem das suas coleções e produtos.',
+    metrics: 'Alcance de não seguidores, visualizações dos vídeos e menções à marca; comparar a evolução entre publicações.'
+  },
+  identidade: {
+    number: '02', category: 'IDENTIDADE', artName: 'Exclusividade',
+    title: 'Preservar a exclusividade',
+    description: 'Escolhemos preservar a exclusividade porque a CHANEL pretende continuar a ser percebida como uma casa de luxo, também nas redes sociais. O objetivo não é comunicar preços ou promoções constantes: é mostrar o cuidado, o saber-fazer e a história que justificam a diferença entre uma peça CHANEL e um produto de consumo massificado.',
+    reasons: [
+      ['Valorizar o trabalho artesanal', 'Mostrar o processo de criação de alta-costura, os ateliers, a seleção de materiais e os detalhes que normalmente não se veem numa campanha.'],
+      ['Proteger a imagem', 'Manter fotografias cuidadas, uma linguagem sóbria e uma frequência de conteúdos que privilegie qualidade em vez de publicações promocionais repetitivas.'],
+      ['Explicar o valor da marca', 'Contar histórias sobre o casaco de tweed, as malas icónicas e a herança de Gabrielle Chanel, para que o prestígio seja compreendido e não apenas anunciado.']
+    ],
+    result: 'Que a comunicação digital aumente a admiração e o desejo pela CHANEL sem banalizar a sua imagem.',
+    metrics: 'Guardados e partilhas de conteúdos sobre o savoir-faire e comentários que revelem interesse pela história, qualidade e criação.'
+  },
+  geracoes: {
+    number: '03', category: 'NOVOS PÚBLICOS', artName: 'Novas gerações',
+    title: 'Conquistar novas gerações',
+    description: 'Escolhemos este objetivo porque os jovens adultos podem começar a relacionar-se com a CHANEL muito antes de comprar uma peça de alta-costura. Perfumes, maquilhagem e vídeos de bastidores são portas de entrada para conhecer a Maison. Queremos gerar interesse e familiaridade agora, mantendo uma imagem de luxo a longo prazo.',
+    reasons: [
+      ['Usar a linguagem dos formatos', 'No TikTok e nos Reels, mostrar pequenos momentos de desfiles, preparação de modelos e processos criativos com edição dinâmica, mas elegante.'],
+      ['Aproximar através da beleza', 'Dar destaque a perfumes como o CHANEL N°5 e a maquilhagem, temas que permitem descobrir o universo da marca sem começar pelas peças mais exclusivas.'],
+      ['Promover participação', 'Criar Stories com sondagens sobre dois looks de alta-costura e perguntas sobre estilos, convidando jovens adultos a interagir com a criatividade da CHANEL.']
+    ],
+    result: 'Que mais jovens adultos descubram e acompanhem a CHANEL, mesmo antes da primeira compra.',
+    metrics: 'Retenção de vídeos curtos, partilhas e respostas às Stories; analisar a faixa etária da audiência quando os dados estiverem disponíveis.'
+  },
+  trafego: {
+    number: '04', category: 'TRÁFEGO', artName: 'Visitas',
+    title: 'Gerar visitas qualificadas',
+    description: 'Escolhemos gerar visitas qualificadas porque a CHANEL não pretende apenas acumular gostos: quer que pessoas realmente interessadas avancem para conhecer as coleções, os perfumes e os pontos de venda. O objetivo é ligar a inspiração criada nas redes sociais ao website oficial e às boutiques, sem pressionar a compra.',
+    reasons: [
+      ['Dar continuidade ao conteúdo', 'Depois de um Reel de uma coleção ou de uma publicação sobre CHANEL N°5, encaminhar o público para a respetiva página de produto ou coleção.'],
+      ['Facilitar a descoberta', 'Utilizar ligações em Stories e no perfil para ajudar quem procura informações sobre uma peça, um perfume ou uma boutique.'],
+      ['Distinguir interesse real de alcance', 'Avaliar se as publicações conduzem a visitas relevantes ao website e à exploração das coleções, em vez de considerar qualquer visualização uma intenção de compra.']
+    ],
+    result: 'Transformar curiosidade pelas publicações em pesquisa efetiva de produtos, coleções e locais de compra.',
+    metrics: 'Cliques nas ligações, visitas ao website provenientes das redes sociais, páginas de produto consultadas e conversões quando mensuráveis.'
+  }
+};
+
+const objectiveDialog = document.getElementById('objective-dialog');
+const objectiveClose = document.getElementById('objective-dialog-close');
+const objectiveList = document.getElementById('objective-dialog-list');
+const objectiveKeys = Object.keys(objectiveDetails);
+let currentObjective = 'notoriedade';
+let objectivePriorFocus = null;
+
+function showObjectiveDetails(key) {
+  const details = objectiveDetails[key];
+  if (!details) return;
+  currentObjective = key;
+  objectiveDialog.dataset.objective = key;
+  document.getElementById('objective-art-number').textContent = details.number;
+  document.getElementById('objective-art-name').textContent = details.artName;
+  document.getElementById('objective-dialog-eyebrow').textContent = `OBJETIVO ${details.number} / 04 · ${details.category}`;
+  document.getElementById('objective-dialog-title').textContent = details.title;
+  document.getElementById('objective-dialog-description').textContent = details.description;
+  objectiveList.replaceChildren(...details.reasons.map(([label, explanation]) => {
+    const li = document.createElement('li');
+    const strong = document.createElement('strong');
+    strong.textContent = `${label}: `;
+    li.append(strong, document.createTextNode(explanation));
+    return li;
+  }));
+  const resultLabel = document.createElement('strong');
+  resultLabel.textContent = 'Resultado pretendido: ';
+  document.getElementById('objective-dialog-takeaway').replaceChildren(resultLabel, document.createTextNode(details.result));
+  const metricsLabel = document.createElement('strong');
+  metricsLabel.textContent = 'Como avaliar: ';
+  document.getElementById('objective-dialog-metrics').replaceChildren(metricsLabel, document.createTextNode(details.metrics));
+}
+
+document.querySelectorAll('.objective-open').forEach((button) => {
+  button.addEventListener('click', () => {
+    objectivePriorFocus = button;
+    showObjectiveDetails(button.dataset.objective);
+    objectiveDialog.showModal();
+    objectiveClose.focus();
+  });
+});
+
+objectiveClose.addEventListener('click', () => objectiveDialog.close());
+document.getElementById('objective-dialog-next').addEventListener('click', () => {
+  const nextIndex = (objectiveKeys.indexOf(currentObjective) + 1) % objectiveKeys.length;
+  showObjectiveDetails(objectiveKeys[nextIndex]);
+  objectiveClose.focus();
+});
+objectiveDialog.addEventListener('click', (event) => {
+  if (event.target === objectiveDialog) objectiveDialog.close();
+});
+objectiveDialog.addEventListener('close', () => objectivePriorFocus?.focus());
 
 </script>
 </body>
