@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#fbfaf7" />
-    <meta name="description" content="Trabalho de grupo de marketing digital sobre a CHANEL: caracterização da empresa, produtos e serviços e público-alvo." />
-    <title>CHANEL — Trabalho de Grupo | Marketing Digital</title>
+    <meta name="description" content="Proposta de gestão de redes sociais para a CHANEL: caracterização, plataformas, publicações, análise de resultados e conclusões." />
+    <title>CHANEL — Proposta de Gestão de Redes Sociais</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -436,6 +436,165 @@ body:has(.product-dialog[open]) { overflow: hidden; }
   .dialog-footer { flex-wrap: wrap; }
 }
 
+/* Additional sections for the complete classroom presentation. */
+.chapter-three { padding-bottom: 80px; }
+.study-chapter { min-height: 100svh; padding-bottom: 85px; }
+.chapter-objectives, .chapter-networks, .chapter-results, .chapter-conclusions { background: #fffefa; }
+.chapter-competitors, .chapter-content, .chapter-analysis { background: #f8f6f1; }
+.study-intro { max-width: 940px; margin-bottom: 48px; }
+.study-intro .section-title { max-width: 1000px; margin-bottom: 25px; }
+.study-intro > p:last-child { max-width: 760px; margin-bottom: 0; color: #756e64; font-size: 16px; line-height: 1.9; }
+.study-index { color: var(--gold); font-family: var(--sans); font-weight: 700; font-size: 10px; line-height: 1.5; letter-spacing: .16em; }
+.objectives-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.objective-card { padding: 34px 37px 28px; min-height: 315px; display: flex; flex-direction: column; border: 1px solid #e8dec9; background: #f9f7f1; }
+.objective-card:nth-child(2), .objective-card:nth-child(3) { background: #fffdf9; }
+.objective-card h3 { max-width: 440px; font-family: var(--serif); font-size: clamp(34px, 3.4vw, 49px); font-weight: 500; line-height: 1.05; margin: 26px 0 15px; }
+.objective-card p { max-width: 520px; color: #797267; font-size: 13px; line-height: 1.85; }
+.study-indicator { display: flex; flex-direction: column; gap: 7px; border-top: 1px solid var(--gold-faint); margin-top: auto; padding-top: 18px; }
+.study-indicator span { font-size: 9px; color: #a28b5c; letter-spacing: .17em; font-weight: 700; }
+.study-indicator strong { font-size: 12px; color: #625749; font-weight: 600; }
+.competitor-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.competitor-card { background: #fffefa; border: 1px solid #e7ddc9; padding: 32px 34px 25px; min-height: 290px; display: flex; flex-direction: column; }
+.competitor-card h3 { margin: 25px 0 13px; font-family: var(--serif); font-size: clamp(42px, 4vw, 56px); line-height: 1; font-weight: 500; letter-spacing: -.025em; }
+.competitor-card p { max-width: 550px; color: #7c756b; font-size: 13px; line-height: 1.85; }
+.competitor-footer { padding-top: 16px; border-top: 1px solid var(--gold-faint); margin-top: auto; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .09em; }
+.network-table-wrap { overflow-x: auto; border: 1px solid #ded3bc; background: var(--white); }
+.network-table { border-collapse: collapse; width: 100%; min-width: 760px; text-align: left; }
+.network-table thead { background: #f1ece0; }
+.network-table th, .network-table td { border-bottom: 1px solid #e8dfcc; padding: 20px 22px; vertical-align: top; }
+.network-table thead th { color: #816c45; font-size: 10px; font-weight: 700; letter-spacing: .14em; }
+.network-table tbody th { font-family: var(--serif); font-size: 27px; font-weight: 600; }
+.network-table tbody td { color: #716c62; font-size: 12px; line-height: 1.8; }
+.network-table tbody tr:last-child th, .network-table tbody tr:last-child td { border-bottom: 0; }
+.network-table tr.network-selected { background: #f8f4e9; }
+.decision-badge { display: inline-flex; border: 1px solid #ddd0b7; color: #8d8170; padding: 7px 10px; border-radius: 100px; font-size: 10px; font-weight: 700; line-height: 1; white-space: nowrap; }
+.decision-badge.selected { border-color: #b99b61; background: #e9daba; color: #72562d; }
+.selected-networks { margin-top: 29px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 19px; }
+.selected-network-card { padding: 30px 34px 25px; min-height: 288px; display: flex; flex-direction: column; background: #fffefa; border: 1px solid #e8dfcb; border-top: 3px solid #c6ab75; }
+.selected-network-card h3 { margin: 19px 0 13px; font-family: var(--serif); font-size: 49px; font-weight: 500; line-height: 1; }
+.selected-network-card p { color: #766f65; font-size: 13px; line-height: 1.85; }
+.network-format { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--gold-faint); color: var(--gold); font-size: 9px; letter-spacing: .12em; font-weight: 700; }
+.reflection-panel { margin-top: 30px; background: #efe8d7; padding: 30px 36px; border-left: 3px solid var(--gold); }
+.reflection-panel h3 { max-width: 850px; margin: 13px 0; font-family: var(--serif); font-size: clamp(29px, 3.2vw, 42px); font-weight: 500; }
+.reflection-panel p { color: #6c655a; max-width: 950px; margin: 0; font-size: 14px; line-height: 1.85; }
+.content-cases { display: grid; gap: 32px; }
+.content-case { background: var(--white); border: 1px solid #e4d8c1; }
+.content-case-top { padding: 20px 27px; border-bottom: 1px solid #e8ddc7; display: flex; justify-content: space-between; gap: 20px; color: #8b7956; font-size: 10px; font-weight: 700; letter-spacing: .13em; }
+.content-case-top strong { color: #655234; }
+.content-case-layout { display: grid; grid-template-columns: minmax(0, .87fr) minmax(0, 1.13fr); min-height: 465px; }
+.media-placeholder { position: relative; min-height: 430px; background: radial-gradient(circle at 52% 34%, #fffdf8 0, rgba(255,253,247,0) 42%), linear-gradient(145deg, #f4ecdc, #e5d4b4); border: 1px dashed #c7ac79; margin: 24px; padding: 45px 30px 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #82704f; }
+.placeholder-num { position: absolute; top: 23px; left: 26px; font-size: 10px; font-weight: 700; letter-spacing: .2em; }
+.placeholder-symbol { font-family: var(--serif); font-size: 100px; color: #bb9b60; line-height: .9; font-weight: 400; margin-bottom: 17px; }
+.media-placeholder strong { font-size: 13px; font-weight: 700; letter-spacing: .19em; color: #765f37; }
+.media-placeholder p { max-width: 260px; font-size: 12px; line-height: 1.8; margin: 17px auto 28px; }
+.placeholder-format { position: absolute; bottom: 19px; left: 18px; right: 18px; font-size: 9px; color: #9a8258; letter-spacing: .1em; font-weight: 700; }
+.looks-placeholder { background: #f1ecdf; }
+.look-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 76%; height: 190px; margin-bottom: 23px; }
+.look-comparison span { display: flex; align-items: center; justify-content: center; border: 1px dashed #bba577; background: #e8ddc8; color: #87704c; font-family: var(--serif); font-size: 27px; }
+.look-comparison span:nth-child(2) { background: #dfd1b6; }
+.content-case-copy { padding: clamp(35px, 5vw, 60px); display: flex; flex-direction: column; }
+.content-case-copy h3 { max-width: 500px; font-family: var(--serif); font-size: clamp(42px, 4vw, 57px); line-height: 1; font-weight: 500; letter-spacing: -.035em; margin: 0 0 25px; }
+.post-copy { font-size: 16px; line-height: 1.9; color: #544e44; }
+.post-hashtags { font-size: 12px; color: var(--gold); line-height: 1.9; overflow-wrap: anywhere; }
+.post-cta { margin-top: 24px; padding: 19px 20px; background: #f7f3ea; border-left: 2px solid var(--gold); display: grid; gap: 8px; }
+.post-cta span { font-size: 9px; font-weight: 700; letter-spacing: .14em; color: #a28550; }
+.post-cta strong { color: #554b3c; font-size: 13px; line-height: 1.7; }
+.content-note { margin: 16px 0 0; color: #93897b; font-size: 11px; line-height: 1.8; }
+.results-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 28px; }
+.results-table-wrap { border: 1px solid #e3d8c3; background: #fffdf8; }
+.results-table { width: 100%; border-collapse: collapse; text-align: left; }
+.results-table thead { background: #eee6d5; }
+.results-table th, .results-table td { border-bottom: 1px solid #e7decc; padding: 21px 22px; }
+.results-table thead th { font-size: 10px; letter-spacing: .11em; color: #826c45; font-weight: 700; }
+.results-table tbody th { font-size: 13px; color: #5f594f; font-weight: 600; }
+.results-table tbody td { font-size: 15px; color: #655941; font-weight: 700; font-variant-numeric: tabular-nums; }
+.results-table tbody tr:last-child th, .results-table tbody tr:last-child td { border-bottom: 0; }
+.results-table tr.sales-row { background: #f3ead7; }
+.results-summary { display: flex; flex-direction: column; gap: 17px; }
+.result-compare { flex: 1; background: #faf7ef; border: 1px solid #e3d7bf; padding: 28px 29px 23px; }
+.bar-row { display: grid; grid-template-columns: 75px minmax(70px, 1fr) 39px; align-items: center; gap: 13px; margin-top: 18px; }
+.bar-row > span { font-size: 11px; color: #645b4c; font-weight: 600; }
+.bar-row > strong { font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; }
+.bar-track { width: 100%; height: 11px; background: #e7dcc7; }
+.bar-fill { height: 100%; background: #a78748; }
+.bar-fill.muted-bar { background: #c8bba5; }
+.result-compare p { font-size: 11px; color: #8b8377; line-height: 1.7; margin: 20px 0 0; }
+.calculation-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #f3eddf; border-top: 1px solid #ddcba8; padding: 24px 28px; margin-top: 30px; }
+.calculation-strip > div { display: grid; gap: 8px; }
+.calculation-strip span { color: #a18a5a; font-size: 9px; font-weight: 700; letter-spacing: .14em; }
+.calculation-strip strong { color: #554f44; font-size: 14px; }
+.calculation-strip em { color: var(--gold); margin: 0 8px; font-style: normal; }
+.chapter-results .analysis-note { margin: 18px 0 0; }
+.analysis-answer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.answer-card { padding: 33px 35px 30px; min-height: 272px; background: #fffefa; border: 1px solid #e5dac5; }
+.answer-num { color: var(--gold); font-family: var(--serif); font-size: 26px; }
+.answer-card h3 { max-width: 470px; margin: 16px 0 14px; font-family: var(--serif); font-size: clamp(30px, 3vw, 40px); line-height: 1.07; font-weight: 500; }
+.answer-card p, .answer-card li { color: #746d62; font-size: 13px; line-height: 1.85; }
+.answer-card p strong { color: #564a35; }
+.answer-card ol { padding-left: 19px; margin: 0; }
+.answer-card li { padding-left: 3px; margin-bottom: 5px; }
+.answer-card li::marker { color: var(--gold); font-weight: 700; }
+.conclusion-decision { background: #f1e8d6; border-left: 4px solid var(--gold); padding: 37px 43px; display: grid; grid-template-columns: minmax(200px, .7fr) minmax(0, 1.3fr); gap: 12px 45px; align-items: center; }
+.conclusion-decision .study-index { grid-column: 1 / -1; }
+.conclusion-decision h3 { margin: 0; font-family: var(--serif); font-size: clamp(57px, 5.3vw, 76px); font-weight: 500; color: #705631; }
+.conclusion-decision p { margin: 0; color: #70665a; font-size: 14px; line-height: 1.9; }
+.conclusion-improvements { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.improvement-card { min-height: 262px; background: #fffefa; border: 1px solid #e5dac5; padding: 32px 35px; }
+.improvement-card h3 { margin: 21px 0 14px; font-family: var(--serif); font-size: clamp(34px, 3.3vw, 47px); font-weight: 500; line-height: 1.05; }
+.improvement-card p { margin: 0; color: #797166; font-size: 13px; line-height: 1.85; }
+.chapter-conclusions .closing-panel { margin-top: 85px; }
+
+@media (max-width: 900px) {
+  .study-intro > p:last-child { font-size: 14px; }
+  .results-layout { grid-template-columns: 1fr; }
+  .results-summary { flex-direction: row; }
+  .result-compare { min-width: 0; }
+  .content-case-layout { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+  .media-placeholder { margin: 17px; padding: 38px 19px; }
+  .content-case-copy { padding: 34px; }
+}
+
+@media (max-width: 640px) {
+  .study-chapter { padding-bottom: 60px; }
+  .study-intro { margin-bottom: 33px; }
+  .study-intro > p:last-child { font-size: 12px; }
+  .objectives-grid, .competitor-grid, .selected-networks, .analysis-answer-grid, .conclusion-improvements { grid-template-columns: 1fr; gap: 13px; }
+  .objective-card, .competitor-card, .selected-network-card, .answer-card, .improvement-card { min-height: 0; padding: 26px 27px; }
+  .objective-card h3 { font-size: 36px; margin: 17px 0 10px; }
+  .study-indicator { margin-top: 15px; }
+  .competitor-card h3 { font-size: 43px; margin: 17px 0 10px; }
+  .competitor-footer { margin-top: 15px; }
+  .network-table th, .network-table td { padding: 15px 17px; }
+  .network-table { min-width: 690px; }
+  .network-table-wrap { margin: 0 -2vw; }
+  .selected-network-card h3 { font-size: 42px; }
+  .reflection-panel { padding: 23px; }
+  .reflection-panel h3 { font-size: 33px; }
+  .reflection-panel p { font-size: 12px; }
+  .content-case-top { padding: 16px 18px; flex-wrap: wrap; font-size: 9px; }
+  .content-case-layout { grid-template-columns: 1fr; }
+  .media-placeholder { min-height: 320px; margin: 15px; }
+  .look-comparison { height: 135px; }
+  .content-case-copy { padding: 21px 23px 28px; }
+  .content-case-copy h3 { font-size: 42px; }
+  .post-copy { font-size: 14px; }
+  .results-table th, .results-table td { padding: 15px 12px; }
+  .results-table thead th { font-size: 9px; }
+  .results-table tbody th { font-size: 11px; }
+  .results-table tbody td { font-size: 12px; }
+  .results-summary { flex-direction: column; }
+  .result-compare { padding: 25px 20px; }
+  .bar-row { grid-template-columns: 72px 1fr 35px; gap: 8px; }
+  .calculation-strip { grid-template-columns: 1fr; padding: 22px; }
+  .answer-card h3 { font-size: 34px; }
+  .conclusion-decision { grid-template-columns: 1fr; padding: 26px; gap: 10px; }
+  .conclusion-decision .study-index { grid-column: auto; }
+  .conclusion-decision h3 { font-size: 61px; }
+  .conclusion-decision p { font-size: 12px; }
+  .improvement-card h3 { font-size: 36px; }
+  .chapter-conclusions .closing-panel { margin-top: 60px; }
+}
+
 </style>
     
   </head>
@@ -445,15 +604,16 @@ body:has(.product-dialog[open]) { overflow: hidden; }
     <header class="site-header">
       <a href="#inicio" class="header-meta" aria-label="Voltar ao início">
         <span class="tiny-diamond" aria-hidden="true"></span>
-        <span>TRABALHO DE GRUPO <span class="header-meta-divider">/</span> MARKETING DIGITAL</span>
+        <span>IEFP <span class="header-meta-divider">/</span> TRABALHO DE GRUPO</span>
       </a>
 
       <a href="#inicio" class="brand-wordmark" aria-label="CHANEL — voltar ao início">CHANEL</a>
 
       <nav class="top-nav" id="top-nav" aria-label="Capítulos">
-        <a href="#essencia">01 Empresa</a>
-        <a href="#universo">02 Produtos</a>
-        <a href="#publico">03 Público-alvo</a>
+        <a href="#essencia">Empresa</a>
+        <a href="#redes">Redes sociais</a>
+        <a href="#publicacoes">Conteúdos</a>
+        <a href="#resultados">Resultados</a>
       </nav>
       <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="top-nav" aria-expanded="false">
         <span></span><span></span>
@@ -461,12 +621,19 @@ body:has(.product-dialog[open]) { overflow: hidden; }
     </header>
 
     <aside class="side-rail" aria-label="Navegação da apresentação">
-      <span class="rail-label">CAPÍTULOS</span>
+      <span class="rail-label">SECÇÕES</span>
       <a href="#inicio" class="rail-dot is-active" data-target="inicio" aria-label="Introdução"><span>Início</span></a>
       <a href="#essencia" class="rail-dot" data-target="essencia" aria-label="Capítulo 1: Empresa"><span>01 · Empresa</span></a>
       <a href="#universo" class="rail-dot" data-target="universo" aria-label="Capítulo 2: Produtos"><span>02 · Produtos</span></a>
       <a href="#publico" class="rail-dot" data-target="publico" aria-label="Capítulo 3: Público-alvo"><span>03 · Público-alvo</span></a>
-      <span class="rail-end">03 / 03</span>
+      <a href="#objetivos" class="rail-dot" data-target="objetivos" aria-label="Capítulo 4: Objetivos"><span>04 · Objetivos</span></a>
+      <a href="#concorrentes" class="rail-dot" data-target="concorrentes" aria-label="Capítulo 5: Concorrentes"><span>05 · Concorrentes</span></a>
+      <a href="#redes" class="rail-dot" data-target="redes" aria-label="Capítulo 6: Redes sociais"><span>06 · Redes sociais</span></a>
+      <a href="#publicacoes" class="rail-dot" data-target="publicacoes" aria-label="Capítulo 7: Publicações"><span>07 · Publicações</span></a>
+      <a href="#resultados" class="rail-dot" data-target="resultados" aria-label="Capítulo 8: Resultados"><span>08 · Resultados</span></a>
+      <a href="#analise" class="rail-dot" data-target="analise" aria-label="Capítulo 9: Análise crítica"><span>09 · Análise</span></a>
+      <a href="#conclusoes" class="rail-dot" data-target="conclusoes" aria-label="Capítulo 10: Conclusões"><span>10 · Conclusões</span></a>
+      <span class="rail-end">10 / 10</span>
     </aside>
 
     <main>
@@ -474,19 +641,20 @@ body:has(.product-dialog[open]) { overflow: hidden; }
         <div class="hero-copy">
           <div class="hero-copy-inner">
             <p class="eyebrow reveal"><span class="line-deco"></span> TRABALHO DE GRUPO · MARKETING DIGITAL</p>
-            <p class="hero-monogram reveal" aria-hidden="true">01—03</p>
-            <h1 id="hero-title" class="reveal">Análise da marca <em>CHANEL.</em></h1>
-            <p class="hero-subtitle reveal">Proposta de gestão das redes sociais. Primeira etapa: conhecer a empresa, os seus produtos e o público a quem se dirige.</p>
+            <p class="hero-monogram reveal" aria-hidden="true">01—04</p>
+            <h1 id="hero-title" class="reveal">CHANEL.<br /><em>Estratégia digital.</em></h1>
+            <p class="hero-subtitle reveal">Proposta de gestão das redes sociais: da caracterização da empresa à criação de conteúdos e análise dos resultados.</p>
             <div class="hero-outline reveal" aria-label="Pontos da apresentação">
               <span><b>01</b> Caracterização da empresa</span>
-              <span><b>02</b> Produtos e serviços</span>
-              <span><b>03</b> Público-alvo</span>
+              <span><b>02</b> Escolha das redes sociais</span>
+              <span><b>03</b> Criação de conteúdos</span>
+              <span><b>04</b> Análise dos resultados</span>
             </div>
             <a class="text-link reveal" href="#essencia">INICIAR O TRABALHO <span aria-hidden="true">↗</span></a>
           </div>
 
           <div class="hero-bottom">
-            <span>APRESENTAÇÃO · ETAPA 1</span>
+            <span>PROPOSTA COMPLETA · 4 ETAPAS</span>
             <a href="#essencia" class="scroll-cue" aria-label="Descer para a primeira secção">
               <span>DESLIZA PARA DESCOBRIR</span>
               <span class="scroll-arrow" aria-hidden="true">↓</span>
@@ -505,8 +673,8 @@ body:has(.product-dialog[open]) { overflow: hidden; }
 
       <section class="chapter chapter-one stage" id="essencia" data-chapter="01" aria-labelledby="essencia-title">
         <div class="chapter-heading reveal">
-          <div class="chapter-number"><span>01</span><span class="chapter-number-rule"></span><span>05</span></div>
-          <p class="eyebrow">CARACTERIZAÇÃO DA EMPRESA</p>
+          <div class="chapter-number"><span>01</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">ETAPA 1 · CARACTERIZAÇÃO DA EMPRESA</p>
         </div>
 
         <div class="chapter-one-layout">
@@ -551,8 +719,8 @@ body:has(.product-dialog[open]) { overflow: hidden; }
 
       <section class="chapter chapter-two stage" id="universo" data-chapter="02" aria-labelledby="universo-title">
         <div class="chapter-heading reveal">
-          <div class="chapter-number"><span>02</span><span class="chapter-number-rule"></span><span>05</span></div>
-          <p class="eyebrow">PRODUTOS E SERVIÇOS</p>
+          <div class="chapter-number"><span>02</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">ETAPA 1 · PRODUTOS E SERVIÇOS</p>
         </div>
 
         <div class="center-heading">
@@ -615,8 +783,8 @@ body:has(.product-dialog[open]) { overflow: hidden; }
 
       <section class="chapter chapter-three stage" id="publico" data-chapter="03" aria-labelledby="publico-title">
         <div class="chapter-heading reveal">
-          <div class="chapter-number"><span>03</span><span class="chapter-number-rule"></span><span>05</span></div>
-          <p class="eyebrow">CARACTERIZAÇÃO DO PÚBLICO-ALVO</p>
+          <div class="chapter-number"><span>03</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">ETAPA 1 · CARACTERIZAÇÃO DO PÚBLICO-ALVO</p>
         </div>
 
         <div class="audience-layout">
@@ -663,22 +831,189 @@ body:has(.product-dialog[open]) { overflow: hidden; }
         <div class="study-conclusion audience-conclusion reveal"><strong>Porque importa esta análise?</strong> Conhecer o público ajuda a escolher as redes sociais, a linguagem e os conteúdos mais adequados para a comunicação digital da marca.</div>
         <p class="analysis-note reveal"><span>*</span> Caracterização proposta para fins académicos. As faixas etárias e os comportamentos são hipóteses de segmentação, não dados demográficos oficiais da CHANEL.</p>
 
-        <div class="closing-panel reveal">
-          <span class="closing-eyebrow">PRIMEIRA PARTE CONCLUÍDA</span>
-          <h2>O que vem <em>a seguir?</em></h2>
-          <p>Esta versão apresenta os três primeiros pontos do trabalho.</p>
-          <div class="closing-next"><span>PRÓXIMOS PONTOS</span><strong>Objetivos nas redes sociais e concorrentes</strong><span aria-hidden="true">↗</span></div>
+        <a href="#objetivos" class="next-chapter reveal"><span>PONTO SEGUINTE</span><span class="next-line"></span><strong>04 — OBJETIVOS NAS REDES SOCIAIS</strong><span aria-hidden="true">↘</span></a>
+      </section>
+
+      <section class="chapter study-chapter chapter-objectives stage" id="objetivos" data-chapter="04" aria-labelledby="objetivos-title">
+        <div class="chapter-heading reveal">
+          <div class="chapter-number"><span>04</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">ETAPA 1 · OBJETIVOS NAS REDES SOCIAIS</p>
         </div>
+        <div class="study-intro reveal">
+          <p class="mini-label">QUESTÃO 04 · O QUE PRETENDE A MARCA ALCANÇAR?</p>
+          <h2 id="objetivos-title" class="section-title">Objetivos de <em>comunicação.</em></h2>
+          <p>Para uma marca de luxo, a gestão digital deve equilibrar notoriedade, exclusividade, aproximação a novas gerações e resultados comerciais. Propomos quatro objetivos complementares.</p>
+        </div>
+        <div class="objectives-grid">
+          <article class="objective-card reveal"><span class="study-index">01 / NOTORIEDADE</span><h3>Reforçar o reconhecimento global</h3><p>Aumentar a visibilidade da CHANEL junto de públicos atuais e potenciais, mantendo uma imagem coerente.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Alcance · visualizações · menções</strong></div></article>
+          <article class="objective-card reveal"><span class="study-index">02 / IDENTIDADE</span><h3>Preservar a exclusividade</h3><p>Valorizar a história, o saber-fazer artesanal e a qualidade, sem transformar a comunicação numa sucessão de promoções.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Partilhas · guardados · comentários</strong></div></article>
+          <article class="objective-card reveal"><span class="study-index">03 / NOVOS PÚBLICOS</span><h3>Conquistar novas gerações</h3><p>Usar vídeos curtos e conteúdos relevantes para despertar interesse entre jovens adultos, sobretudo no universo da beleza.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Retenção dos vídeos · interação jovem</strong></div></article>
+          <article class="objective-card reveal"><span class="study-index">04 / TRÁFEGO</span><h3>Gerar visitas qualificadas</h3><p>Orientar pessoas interessadas para o website oficial e para as boutiques, aproximando a comunicação da intenção de compra.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Cliques · visitas · conversões</strong></div></article>
+        </div>
+        <a href="#concorrentes" class="next-chapter reveal"><span>PONTO SEGUINTE</span><span class="next-line"></span><strong>05 — PRINCIPAIS CONCORRENTES</strong><span aria-hidden="true">↘</span></a>
+      </section>
+
+      <section class="chapter study-chapter chapter-competitors stage" id="concorrentes" data-chapter="05" aria-labelledby="concorrentes-title">
+        <div class="chapter-heading reveal">
+          <div class="chapter-number"><span>05</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">ETAPA 1 · ANÁLISE DA CONCORRÊNCIA</p>
+        </div>
+        <div class="study-intro reveal">
+          <p class="mini-label">QUESTÃO 05 · QUEM CONCORRE COM A CHANEL?</p>
+          <h2 id="concorrentes-title" class="section-title">Principais <em>concorrentes.</em></h2>
+          <p>O mercado do luxo reúne marcas que competem pela atenção de consumidores com interesses semelhantes. A comparação deve considerar os produtos, a imagem e a comunicação digital.</p>
+        </div>
+        <div class="competitor-grid">
+          <article class="competitor-card reveal"><span class="study-index">01 / MODA E BELEZA</span><h3>Christian Dior</h3><p>Concorrente em alta-costura, pronto-a-vestir, perfumes e cosmética. Aproxima-se da CHANEL pelo peso da tradição e da beleza.</p><span class="competitor-footer">Moda · Perfumaria · Cosmética</span></article>
+          <article class="competitor-card reveal"><span class="study-index">02 / MODA E PELE</span><h3>Louis Vuitton</h3><p>Forte presença em malas, artigos de couro, acessórios e moda de luxo, com comunicação assente na imagem e na exclusividade.</p><span class="competitor-footer">Malas · Artigos de couro · Moda</span></article>
+          <article class="competitor-card reveal"><span class="study-index">03 / MODA E ACESSÓRIOS</span><h3>Gucci</h3><p>Marca de moda e acessórios de luxo, reconhecida por campanhas visuais e uma identidade criativa própria.</p><span class="competitor-footer">Vestuário · Acessórios · Imagem</span></article>
+          <article class="competitor-card reveal"><span class="study-index">04 / MODA E DESIGN</span><h3>Prada</h3><p>Concorrente em vestuário, malas e acessórios, com uma abordagem de design e uma linguagem visual distinta.</p><span class="competitor-footer">Moda · Design · Acessórios</span></article>
+        </div>
+        <div class="study-conclusion reveal"><strong>Conclusão:</strong> para se diferenciar, a CHANEL deve comunicar a sua identidade histórica, o trabalho artesanal e os elementos visuais que a tornam reconhecível.</div>
+        <a href="#redes" class="next-chapter reveal"><span>ETAPA SEGUINTE</span><span class="next-line"></span><strong>06 — ESCOLHA DAS REDES SOCIAIS</strong><span aria-hidden="true">↘</span></a>
+      </section>
+
+      <section class="chapter study-chapter chapter-networks stage" id="redes" data-chapter="06" aria-labelledby="redes-title">
+        <div class="chapter-heading reveal">
+          <div class="chapter-number"><span>06</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">ETAPA 2 · ESCOLHA DAS REDES SOCIAIS</p>
+        </div>
+        <div class="study-intro reveal">
+          <p class="mini-label">ANÁLISE COMPARATIVA · CINCO PLATAFORMAS</p>
+          <h2 id="redes-title" class="section-title">Onde deve estar <em>a CHANEL?</em></h2>
+          <p>Não basta escolher as redes com mais utilizadores. É necessário considerar o tipo de conteúdos, o público-alvo e os objetivos de comunicação.</p>
+        </div>
+        <div class="network-table-wrap reveal">
+          <table class="network-table">
+            <thead><tr><th scope="col">REDE SOCIAL</th><th scope="col">CARACTERÍSTICAS</th><th scope="col">ADEQUAÇÃO À CHANEL</th><th scope="col">DECISÃO</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Facebook</th><td>Comunidades, notícias, eventos e partilhas.</td><td>Útil para relacionamento, tráfego e públicos mais maduros.</td><td><span class="decision-badge">Complementar</span></td></tr>
+              <tr class="network-selected"><th scope="row">Instagram</th><td>Fotografia, Reels, Stories e comunicação visual.</td><td>Ideal para desfiles, campanhas de moda e tutoriais de beleza.</td><td><span class="decision-badge selected">Escolhida</span></td></tr>
+              <tr><th scope="row">LinkedIn</th><td>Rede profissional e comunicação institucional.</td><td>Relevante para carreira, empresa e reputação corporativa.</td><td><span class="decision-badge">Secundária</span></td></tr>
+              <tr><th scope="row">YouTube</th><td>Vídeos longos, entrevistas e documentários.</td><td>Bom para bastidores e histórias aprofundadas da marca.</td><td><span class="decision-badge">Complementar</span></td></tr>
+              <tr class="network-selected"><th scope="row">TikTok</th><td>Vídeos curtos, descoberta e interação rápida.</td><td>Permite aproximar a marca da Geração Z com criatividade.</td><td><span class="decision-badge selected">Escolhida</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="selected-networks">
+          <article class="selected-network-card reveal"><span class="study-index">PLATAFORMA ESCOLHIDA · 01</span><h3>Instagram</h3><p>A forte componente visual permite mostrar moda, perfumes e beleza de forma cuidada. Reels e Stories oferecem formatos dinâmicos sem perder a estética sofisticada.</p><div class="network-format">FORMATOS: FOTOGRAFIA · REELS · STORIES</div></article>
+          <article class="selected-network-card reveal"><span class="study-index">PLATAFORMA ESCOLHIDA · 02</span><h3>TikTok</h3><p>Os vídeos curtos podem mostrar bastidores de desfiles, processos criativos e conteúdos interativos, despertando interesse entre públicos mais jovens.</p><div class="network-format">FORMATOS: VÍDEO CURTO · BASTIDORES · INTERAÇÃO</div></article>
+        </div>
+        <div class="reflection-panel reveal"><span class="study-index">QUESTÃO DE REFLEXÃO</span><h3>Uma empresa precisa de estar em todas as redes para ter sucesso?</h3><p><strong>Não.</strong> O sucesso depende mais da presença nas plataformas certas, de conteúdos adaptados ao público e da avaliação dos resultados do que do número de contas abertas. Concentrar recursos no Instagram e no TikTok permite uma estratégia mais consistente.</p></div>
+        <a href="#publicacoes" class="next-chapter reveal"><span>ETAPA SEGUINTE</span><span class="next-line"></span><strong>07 — CRIAÇÃO DE CONTEÚDOS</strong><span aria-hidden="true">↘</span></a>
+      </section>
+
+      <section class="chapter study-chapter chapter-content stage" id="publicacoes" data-chapter="07" aria-labelledby="publicacoes-title">
+        <div class="chapter-heading reveal">
+          <div class="chapter-number"><span>07</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">ETAPA 3 · CRIAÇÃO DE CONTEÚDOS</p>
+        </div>
+        <div class="study-intro reveal">
+          <p class="mini-label">DUAS PROPOSTAS · DOIS OBJETIVOS</p>
+          <h2 id="publicacoes-title" class="section-title">Publicações para <em>redes sociais.</em></h2>
+          <p>Uma publicação pretende promover um produto; a outra foi desenhada para incentivar a participação. As imagens e o vídeo abaixo são espaços reservados para os materiais finais.</p>
+        </div>
+        <div class="content-cases">
+          <article class="content-case reveal">
+            <div class="content-case-top"><span>PUBLICAÇÃO 01 · PROMOÇÃO DE PRODUTO</span><strong>INSTAGRAM</strong></div>
+            <div class="content-case-layout">
+              <div class="media-placeholder perfume-placeholder" role="img" aria-label="Espaço reservado para fotografia minimalista do perfume CHANEL N°5"><span class="placeholder-num">VISUAL 01</span><span class="placeholder-symbol" aria-hidden="true">◇</span><strong>IMAGEM A INSERIR</strong><p>Frasco de CHANEL N°5 sobre fundo dourado acetinado, com iluminação dramática.</p><span class="placeholder-format">FORMATO RECOMENDADO · 4:5</span></div>
+              <div class="content-case-copy"><p class="mini-label">TÍTULO DA PUBLICAÇÃO</p><h3>A Essência de um Ícone</h3><p class="post-copy">“Mais do que um perfume, uma lenda viva. Deixe-se envolver por notas intemporais que celebram a elegância e a audácia feminina há mais de um século.”</p><p class="post-hashtags">#ChanelNo5 #LuxuryPerfume #HighFashion #TimelessElegance</p><div class="post-cta"><span>CHAMADA PARA A AÇÃO</span><strong>Descubra a sua assinatura olfativa no link da bio.</strong></div></div>
+            </div>
+          </article>
+          <article class="content-case reveal">
+            <div class="content-case-top"><span>PUBLICAÇÃO 02 · CRIAR INTERAÇÃO</span><strong>TIKTOK</strong></div>
+            <div class="content-case-layout">
+              <div class="media-placeholder looks-placeholder" role="img" aria-label="Espaço reservado para vídeo vertical com dois looks de alta-costura A e B"><span class="placeholder-num">VISUAL 02</span><div class="look-comparison" aria-hidden="true"><span>LOOK A</span><span>LOOK B</span></div><strong>VÍDEO A INSERIR</strong><p>Dois looks de alta-costura identificados A e B, apresentados num vídeo curto.</p><span class="placeholder-format">FORMATO RECOMENDADO · 9:16</span></div>
+              <div class="content-case-copy"><p class="mini-label">TÍTULO DA PUBLICAÇÃO</p><h3>Qual é o seu Look Favorito?</h3><p class="post-copy">“A haute couture ganha vida em Paris. Queremos saber a sua opinião sobre as propostas da nova temporada!”</p><p class="post-hashtags">#ChanelHauteCouture #ParisFashionWeek #ChanelShow</p><div class="post-cta"><span>CHAMADA PARA A AÇÃO</span><strong>Comenta A ou B e explica porquê!</strong></div><p class="content-note">Adaptámos a sondagem prevista para Stories a um vídeo interativo no TikTok, de acordo com as redes selecionadas.</p></div>
+            </div>
+          </article>
+        </div>
+        <a href="#resultados" class="next-chapter reveal"><span>ETAPA SEGUINTE</span><span class="next-line"></span><strong>08 — ANÁLISE DOS RESULTADOS</strong><span aria-hidden="true">↘</span></a>
+      </section>
+
+      <section class="chapter study-chapter chapter-results stage" id="resultados" data-chapter="08" aria-labelledby="resultados-title">
+        <div class="chapter-heading reveal">
+          <div class="chapter-number"><span>08</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">ETAPA 4 · ANÁLISE DE RESULTADOS</p>
+        </div>
+        <div class="study-intro reveal">
+          <p class="mini-label">CAMPANHA DE 30 DIAS · FACEBOOK VS INSTAGRAM</p>
+          <h2 id="resultados-title" class="section-title">O que mostram <em>os dados?</em></h2>
+          <p>A campanha apresentada no enunciado permite comparar interação, visitas e vendas. Os valores abaixo são dados do exercício, não resultados reais da CHANEL.</p>
+        </div>
+        <div class="results-layout">
+          <div class="results-table-wrap reveal">
+            <table class="results-table">
+              <thead><tr><th scope="col">INDICADOR</th><th scope="col">FACEBOOK</th><th scope="col">INSTAGRAM</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Seguidores</th><td>2 500</td><td>4 000</td></tr>
+                <tr><th scope="row">Gostos</th><td>300</td><td>650</td></tr>
+                <tr><th scope="row">Comentários</th><td>80</td><td>120</td></tr>
+                <tr><th scope="row">Partilhas</th><td>100</td><td>180</td></tr>
+                <tr><th scope="row">Visitas ao website</th><td>200</td><td>150</td></tr>
+                <tr class="sales-row"><th scope="row">Vendas</th><td>25</td><td>15</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="results-summary reveal">
+            <div class="result-compare"><span class="study-index">INTERAÇÕES TOTAIS · GOSTOS + COMENTÁRIOS + PARTILHAS</span><div class="bar-row"><span>Facebook</span><div class="bar-track"><div class="bar-fill muted-bar" style="width:50.53%"></div></div><strong>480</strong></div><div class="bar-row"><span>Instagram</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><strong>950</strong></div><p>O Instagram registou quase o dobro das interações.</p></div>
+            <div class="result-compare"><span class="study-index">VENDAS REALIZADAS</span><div class="bar-row"><span>Facebook</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><strong>25</strong></div><div class="bar-row"><span>Instagram</span><div class="bar-track"><div class="bar-fill muted-bar" style="width:60%"></div></div><strong>15</strong></div><p>O Facebook gerou mais vendas, apesar de ter menos seguidores.</p></div>
+          </div>
+        </div>
+        <div class="calculation-strip reveal"><div><span>INTERAÇÕES / SEGUIDORES*</span><strong>Facebook 19,2% <em>·</em> Instagram 23,75%</strong></div><div><span>VENDAS / VISITAS AO WEBSITE</span><strong>Facebook 12,5% <em>·</em> Instagram 10%</strong></div></div>
+        <p class="analysis-note reveal">* Taxa simplificada calculada a partir dos dados do enunciado. Não substitui uma taxa de envolvimento baseada em alcance ou utilizadores únicos.</p>
+        <a href="#analise" class="next-chapter reveal"><span>PONTO SEGUINTE</span><span class="next-line"></span><strong>09 — RESPOSTAS E DECISÕES</strong><span aria-hidden="true">↘</span></a>
+      </section>
+
+      <section class="chapter study-chapter chapter-analysis stage" id="analise" data-chapter="09" aria-labelledby="analise-title">
+        <div class="chapter-heading reveal">
+          <div class="chapter-number"><span>09</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">ETAPA 4 · TOMADA DE DECISÕES</p>
+        </div>
+        <div class="study-intro reveal">
+          <p class="mini-label">SEIS QUESTÕES · ANÁLISE CRÍTICA</p>
+          <h2 id="analise-title" class="section-title">Interpretar para <em>decidir.</em></h2>
+          <p>Os números só são úteis quando ajudam a perceber o comportamento do público e a melhorar a estratégia de comunicação.</p>
+        </div>
+        <div class="analysis-answer-grid">
+          <article class="answer-card reveal"><span class="answer-num">01</span><h3>Qual apresentou mais interação?</h3><p><strong>Instagram.</strong> Somou 950 gostos, comentários e partilhas, contra 480 no Facebook. Mesmo relativamente aos seguidores, apresenta um indicador simplificado superior: 23,75% contra 19,2%.</p></article>
+          <article class="answer-card reveal"><span class="answer-num">02</span><h3>Porque vendeu mais o Facebook?</h3><p>Registou 25 vendas em 200 visitas (12,5%), enquanto o Instagram obteve 15 em 150 (10%). Pode indicar um público com maior intenção de compra ou um percurso de conversão mais eficaz; os dados não permitem determinar a causa com certeza.</p></article>
+          <article class="answer-card reveal"><span class="answer-num">03</span><h3>Mais seguidores significam sucesso?</h3><p><strong>Não necessariamente.</strong> O Instagram teve mais seguidores e interações, mas o Facebook conseguiu mais vendas. O sucesso depende dos objetivos e da qualidade dos resultados, não apenas da dimensão da audiência.</p></article>
+          <article class="answer-card reveal"><span class="answer-num">04</span><h3>Em que plataforma apostar?</h3><p>Na campanha analisada, daríamos prioridade ao <strong>Instagram</strong> para notoriedade e relação com o público, melhorando os caminhos para a compra. Manteríamos o Facebook como referência de conversão e o TikTok para atingir públicos jovens.</p></article>
+          <article class="answer-card reveal"><span class="answer-num">05</span><h3>Três estratégias para melhorar</h3><ol><li>Live shopping e demonstrações com especialistas de beleza.</li><li>Vídeos exclusivos de bastidores e processos criativos.</li><li>Parcerias seletivas com microinfluenciadores de moda e luxo.</li></ol></article>
+          <article class="answer-card reveal"><span class="answer-num">06</span><h3>Como melhorar a publicação 1?</h3><p>Transformar a fotografia do perfume num <strong>Reel curto</strong>, com detalhe do frasco, ambiente de atelier e aplicação do produto. Incluir um CTA claro e testar diferentes versões para melhorar a retenção e os cliques.</p></article>
+        </div>
+        <a href="#conclusoes" class="next-chapter reveal"><span>ÚLTIMA SECÇÃO</span><span class="next-line"></span><strong>10 — CONCLUSÕES FINAIS</strong><span aria-hidden="true">↘</span></a>
+      </section>
+
+      <section class="chapter study-chapter chapter-conclusions stage" id="conclusoes" data-chapter="10" aria-labelledby="conclusoes-title">
+        <div class="chapter-heading reveal">
+          <div class="chapter-number"><span>10</span><span class="chapter-number-rule"></span><span>10</span></div>
+          <p class="eyebrow">APRESENTAÇÃO DOS RESULTADOS · CONCLUSÕES</p>
+        </div>
+        <div class="study-intro reveal">
+          <p class="mini-label">O QUE APRENDEMOS?</p>
+          <h2 id="conclusoes-title" class="section-title">Conclusões e <em>propostas de melhoria.</em></h2>
+          <p>A estratégia digital deve respeitar a identidade da CHANEL, escolher plataformas adequadas e avaliar resultados de acordo com cada objetivo.</p>
+        </div>
+        <div class="conclusion-decision reveal"><span class="study-index">REDE MAIS EFICAZ PARA INTERAÇÃO</span><h3>Instagram</h3><p>Destacou-se na campanha pela interação com o público. O Facebook, apesar da menor audiência, obteve mais vendas. Assim, a melhor plataforma depende do objetivo que se pretende atingir.</p></div>
+        <div class="conclusion-improvements">
+          <article class="improvement-card reveal"><span class="study-index">PROPOSTA 01 · CONTEÚDO</span><h3>Mais vídeo e bastidores</h3><p>Reels e vídeos TikTok com processos criativos, desfiles, demonstrações e histórias dos produtos, adaptados à linguagem de cada rede.</p></article>
+          <article class="improvement-card reveal"><span class="study-index">PROPOSTA 02 · CONVERSÃO</span><h3>Melhor percurso de compra</h3><p>Chamadas para a ação mais claras, ligações diretas às páginas de produto e análise contínua de cliques, visitas e vendas.</p></article>
+        </div>
+        <div class="study-conclusion reveal"><strong>Recomendação final:</strong> concentrar a comunicação no Instagram e no TikTok, acompanhar indicadores de interação e conversão e ajustar os conteúdos sem perder a exclusividade da marca.</div>
+        <div class="closing-panel reveal"><span class="closing-eyebrow">CHANEL · TRABALHO DE GRUPO</span><h2>Obrigado pela <em>atenção.</em></h2><p>Proposta de Gestão de Redes Sociais · Marketing Digital</p><div class="closing-next"><span>FIM DA APRESENTAÇÃO</span><strong>Questões e discussão com a turma</strong><span aria-hidden="true">✦</span></div></div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-brand">CHANEL<span> · </span>TRABALHO DE GRUPO</div>
       <div class="footer-sources">FONTES: <a href="https://www.chanel.com/us/about-chanel/gabrielle-chanel/" target="_blank" rel="noopener noreferrer">HISTÓRIA DA MAISON</a> <span>·</span> <a href="https://www.chanel.com/pt/" target="_blank" rel="noopener noreferrer">CHANEL OFICIAL</a></div>
-      <span class="footer-disclaimer">Projeto académico independente. Imagens conceptuais, não oficiais.</span>
+      <span class="footer-disclaimer">Projeto académico independente. Dados da campanha fornecidos pelo enunciado; visuais conceptuais e placeholders.</span>
     </footer>
 
-    <div class="presentation-hud" aria-live="polite"><span>SECÇÃO</span><strong id="hud-chapter">00</strong><span class="hud-separator">/</span><span>03</span></div>
+    <div class="presentation-hud" aria-live="polite"><span>SECÇÃO</span><strong id="hud-chapter">00</strong><span class="hud-separator">/</span><span>10</span></div>
   <script>
 document.documentElement.classList.add('js');
 
@@ -788,7 +1123,7 @@ const productDetails = {
     caption: 'PERFUMES & BELEZA · CHANCE EAU TENDRE',
     description: 'O universo de beleza inclui fragrâncias, maquilhagem e cuidados de pele. É uma área importante para a notoriedade da CHANEL porque permite um contacto mais frequente com os consumidores e chega também a públicos mais jovens.',
     items: [
-      'Perfumes como CHANEL N°5 e CHANCE.',
+      'Perfumes como CHANEL N°5, COCO MADEMOISELLE e CHANCE.',
       'Maquilhagem para rosto, olhos, lábios e unhas.',
       'Tratamentos e cuidados de pele.'
     ],
