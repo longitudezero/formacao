@@ -642,6 +642,79 @@ body:has(.product-dialog[open]) { overflow: hidden; }
   .chapter-conclusions .closing-panel { margin-top: 60px; }
 }
 
+/* Three strategic presentation moments: 06, 08 and 10. */
+.chapter-dark {
+  --gold: #c8a666;
+  --gold-soft: #b99a5b;
+  --gold-faint: rgba(200, 166, 102, .29);
+  color: #f5f2ec;
+  background: #0b0b0b;
+}
+.chapter-dark .chapter-heading { border-bottom-color: var(--gold-faint); }
+.chapter-dark .chapter-number span:last-child { color: #b1a99a; }
+.chapter-dark .chapter-number-rule, .chapter-dark .next-line { background: var(--gold-faint); }
+.chapter-dark .section-title { color: #f5f2ec; }
+.chapter-dark .study-intro > p:last-child { color: #d0c9bb; }
+.chapter-dark .next-chapter { color: #b7ae9e; }
+.chapter-dark .next-chapter strong { color: #d6b475; }
+.chapter-dark .next-chapter:hover { color: #f5f2ec; }
+.chapter-dark .study-index, .chapter-dark .mini-label, .chapter-dark .eyebrow { color: #d1af70; }
+.chapter-dark .study-conclusion { background: #191714; border-color: #493d28; border-left-color: var(--gold); color: #d9d0c1; }
+.chapter-dark .study-conclusion strong { color: #e4c68b; }
+
+/* 06 — a dark comparison table and visibly selected platforms. */
+.chapter-dark .network-table-wrap { background: #171717; border-color: #4c412d; }
+.chapter-dark .network-table thead { background: #282219; }
+.chapter-dark .network-table th, .chapter-dark .network-table td { border-bottom-color: #393327; }
+.chapter-dark .network-table thead th { color: #e2c58d; }
+.chapter-dark .network-table tbody th { color: #f5f2ec; }
+.chapter-dark .network-table tbody td { color: #d4cdc2; }
+.chapter-dark .network-table tr.network-selected { background: #2a2318; }
+.chapter-dark .network-table tr.network-selected th { box-shadow: inset 3px 0 #b99a5b; }
+.chapter-dark .decision-badge { background: #21201e; color: #d5caba; border-color: #655946; }
+.chapter-dark .decision-badge.selected { background: #5c4626; color: #ffe6af; border-color: #caa765; }
+.chapter-dark .selected-network-card { background: #181818; border-color: #4a402e; border-top-color: #c8a666; }
+.chapter-dark .selected-network-card h3 { color: #f5f2ec; }
+.chapter-dark .selected-network-card p { color: #d2cabd; }
+.chapter-dark .network-format { border-top-color: var(--gold-faint); color: #d5b577; }
+.chapter-dark .reflection-panel { background: #211c15; border-left-color: var(--gold); }
+.chapter-dark .reflection-panel h3 { color: #f5f2ec; }
+.chapter-dark .reflection-panel p { color: #d8d0c3; }
+.chapter-dark .reflection-panel p strong { color: #f2d398; }
+
+/* 08 — results remain readable, while the comparative bars gain emphasis. */
+.chapter-dark .results-table-wrap { background: #171717; border-color: #4a402e; }
+.chapter-dark .results-table thead { background: #2a241b; }
+.chapter-dark .results-table th, .chapter-dark .results-table td { border-bottom-color: #3c3428; }
+.chapter-dark .results-table thead th { color: #e4c88e; }
+.chapter-dark .results-table tbody th { color: #e6dfd4; }
+.chapter-dark .results-table tbody td { color: #f7e6be; }
+.chapter-dark .results-table tr.sales-row { background: #312719; }
+.chapter-dark .result-compare { background: #181818; border-color: #4b402e; }
+.chapter-dark .bar-row > span { color: #ddd3c2; }
+.chapter-dark .bar-row > strong { color: #f5f2ec; }
+.chapter-dark .bar-track { background: #40382a; }
+.chapter-dark .bar-fill { background: #c8a666; }
+.chapter-dark .bar-fill.muted-bar { background: #847a69; }
+.chapter-dark .result-compare p { color: #c2b9aa; }
+.chapter-dark .calculation-strip { background: #211c16; border-top-color: #8c744a; }
+.chapter-dark .calculation-strip span { color: #d8b877; }
+.chapter-dark .calculation-strip strong { color: #eee9e1; }
+.chapter-dark .calculation-strip em { color: #d2ae6a; }
+.chapter-dark .analysis-note { color: #bbb2a4; }
+
+/* 10 — the closing message carries the same black-and-gold identity. */
+.chapter-dark .conclusion-decision { background: #211c15; border-left-color: var(--gold); }
+.chapter-dark .conclusion-decision h3 { color: #e2be7a; }
+.chapter-dark .conclusion-decision p { color: #ded5c8; }
+.chapter-dark .improvement-card { background: #181818; border-color: #4a402e; }
+.chapter-dark .improvement-card h3 { color: #f5f2ec; }
+.chapter-dark .improvement-card p { color: #d1c9bd; }
+.chapter-dark .closing-panel { background: #181612; border-top-color: #6c5938; }
+.chapter-dark .closing-panel h2, .chapter-dark .closing-next strong { color: #f5f2ec; }
+.chapter-dark .closing-panel > p { color: #d0c5b5; }
+.chapter-dark .closing-next { border-top-color: #50442e; }
+
 </style>
     
   </head>
@@ -920,7 +993,7 @@ body:has(.product-dialog[open]) { overflow: hidden; }
         <a href="#redes" class="next-chapter reveal"><span>ETAPA SEGUINTE</span><span class="next-line"></span><strong>06 — ESCOLHA DAS REDES SOCIAIS</strong><span aria-hidden="true">↘</span></a>
       </section>
 
-      <section class="chapter study-chapter chapter-networks stage" id="redes" data-chapter="06" aria-labelledby="redes-title">
+      <section class="chapter study-chapter chapter-networks chapter-dark stage" id="redes" data-chapter="06" aria-labelledby="redes-title">
         <div class="chapter-heading reveal">
           <div class="chapter-number"><span>06</span><span class="chapter-number-rule"></span><span>10</span></div>
           <p class="eyebrow">ETAPA 2 · ESCOLHA DAS REDES SOCIAIS</p>
@@ -995,7 +1068,7 @@ body:has(.product-dialog[open]) { overflow: hidden; }
         <a href="#resultados" class="next-chapter reveal"><span>ETAPA SEGUINTE</span><span class="next-line"></span><strong>08 — ANÁLISE DOS RESULTADOS</strong><span aria-hidden="true">↘</span></a>
       </section>
 
-      <section class="chapter study-chapter chapter-results stage" id="resultados" data-chapter="08" aria-labelledby="resultados-title">
+      <section class="chapter study-chapter chapter-results chapter-dark stage" id="resultados" data-chapter="08" aria-labelledby="resultados-title">
         <div class="chapter-heading reveal">
           <div class="chapter-number"><span>08</span><span class="chapter-number-rule"></span><span>10</span></div>
           <p class="eyebrow">ETAPA 4 · ANÁLISE DE RESULTADOS</p>
@@ -1050,7 +1123,7 @@ body:has(.product-dialog[open]) { overflow: hidden; }
         <a href="#conclusoes" class="next-chapter reveal"><span>ÚLTIMA SECÇÃO</span><span class="next-line"></span><strong>10 — CONCLUSÕES FINAIS</strong><span aria-hidden="true">↘</span></a>
       </section>
 
-      <section class="chapter study-chapter chapter-conclusions stage" id="conclusoes" data-chapter="10" aria-labelledby="conclusoes-title">
+      <section class="chapter study-chapter chapter-conclusions chapter-dark stage" id="conclusoes" data-chapter="10" aria-labelledby="conclusoes-title">
         <div class="chapter-heading reveal">
           <div class="chapter-number"><span>10</span><span class="chapter-number-rule"></span><span>10</span></div>
           <p class="eyebrow">APRESENTAÇÃO DOS RESULTADOS · CONCLUSÕES</p>
