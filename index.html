@@ -458,6 +458,43 @@ body:has(.product-dialog[open]) { overflow: hidden; }
 .competitor-card h3 { margin: 25px 0 13px; font-family: var(--serif); font-size: clamp(42px, 4vw, 56px); line-height: 1; font-weight: 500; letter-spacing: -.025em; }
 .competitor-card p { max-width: 550px; color: #7c756b; font-size: 13px; line-height: 1.85; }
 .competitor-footer { padding-top: 16px; border-top: 1px solid var(--gold-faint); margin-top: auto; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .09em; }
+.competitor-card { position: relative; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.competitor-card:hover, .competitor-card:focus-within { transform: translateY(-3px); border-color: #c7a871; box-shadow: 0 15px 34px rgba(50, 39, 23, .08); }
+.competitor-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.competitor-card-action { color: #826333; white-space: nowrap; letter-spacing: .12em; }
+.competitor-card-action span { font-size: 17px; vertical-align: -1px; margin-left: 4px; }
+.competitor-card:hover .competitor-card-action, .competitor-card:focus-within .competitor-card-action { text-decoration: underline; text-underline-offset: 4px; }
+.competitor-open { appearance: none; position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.competitor-open:focus-visible { outline: 3px solid #b58d4e; outline-offset: -5px; }
+.competitor-dialog { width: min(1090px, 95vw); }
+.competitor-dialog-layout { grid-template-columns: minmax(0, 39%) minmax(0, 61%); }
+.competitor-dialog-art { position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 40px clamp(28px, 3.6vw, 53px); background: #24211d; color: #eee7da; overflow: hidden; }
+.competitor-dialog-art::before { content: ''; position: absolute; width: 125%; aspect-ratio: 1; border: 1px solid rgba(202, 176, 120, .23); border-radius: 50%; left: -55%; top: 13%; pointer-events: none; }
+.competitor-dialog-art::after { content: ''; position: absolute; width: 80%; aspect-ratio: 1; border: 1px solid rgba(202, 176, 120, .15); border-radius: 50%; right: -42%; bottom: -8%; pointer-events: none; }
+.competitor-art-top, .competitor-art-bottom { position: relative; z-index: 1; color: #d2b780; font-size: 10px; font-weight: 700; letter-spacing: .16em; line-height: 1.7; }
+.competitor-art-core { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 19px; }
+.competitor-art-number { font-family: var(--serif); font-size: clamp(90px, 10vw, 145px); line-height: .7; color: rgba(215, 194, 152, .17); font-weight: 400; }
+.competitor-art-name { font-family: var(--serif); font-size: clamp(47px, 5.4vw, 76px); font-weight: 400; line-height: .93; letter-spacing: -.055em; overflow-wrap: anywhere; }
+.competitor-art-rule { height: 1px; width: 80px; background: #b9975b; }
+.competitor-dialog-copy { padding-top: 64px; }
+.competitor-dialog-copy h2 { font-size: clamp(46px, 4.9vw, 69px); margin-bottom: 22px; }
+.competitor-dialog-copy .dialog-description { font-size: 13px; line-height: 1.8; margin-bottom: 21px; }
+.competitor-dialog-copy .dialog-list { margin-bottom: 21px; }
+.competitor-dialog-copy .dialog-list li { font-size: 12px; line-height: 1.65; margin-bottom: 8px; }
+.competitor-dialog-copy .dialog-takeaway { margin-bottom: 17px; }
+.competitor-dialog-source { margin: 0 0 20px; color: #8b806f; font-size: 10px; line-height: 1.6; }
+.competitor-dialog-source a { color: #8b6b37; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 760px) {
+  .competitor-dialog { width: min(540px, 94vw); max-height: 92dvh; overflow-y: auto; }
+  .competitor-dialog-layout { display: flex; flex-direction: column; height: auto; max-height: none; }
+  .competitor-dialog-art { min-height: 182px; padding: 22px 29px; }
+  .competitor-art-core { gap: 7px; }
+  .competitor-art-number { font-size: 45px; }
+  .competitor-art-name { font-size: 44px; }
+  .competitor-art-rule, .competitor-art-bottom { display: none; }
+  .competitor-dialog-copy { overflow: visible; padding: 57px 28px 28px; }
+  .competitor-dialog-copy h2 { font-size: clamp(43px, 10vw, 58px); }
+}
 .network-table-wrap { overflow-x: auto; border: 1px solid #ded3bc; background: var(--white); }
 .network-table { border-collapse: collapse; width: 100%; min-width: 760px; text-align: left; }
 .network-table thead { background: #f1ece0; }
@@ -1064,11 +1101,32 @@ body:has(.product-dialog[open]) { overflow: hidden; }
           <p>O mercado do luxo reúne marcas que competem pela atenção de consumidores com interesses semelhantes. A comparação deve considerar os produtos, a imagem e a comunicação digital.</p>
         </div>
         <div class="competitor-grid">
-          <article class="competitor-card reveal"><span class="study-index">01 / MODA E BELEZA</span><h3>Christian Dior</h3><p>Concorrente em alta-costura, pronto-a-vestir, perfumes e cosmética. Aproxima-se da CHANEL pelo peso da tradição e da beleza.</p><span class="competitor-footer">Moda · Perfumaria · Cosmética</span></article>
-          <article class="competitor-card reveal"><span class="study-index">02 / MODA E PELE</span><h3>Louis Vuitton</h3><p>Forte presença em malas, artigos de couro, acessórios e moda de luxo, com comunicação assente na imagem e na exclusividade.</p><span class="competitor-footer">Malas · Artigos de couro · Moda</span></article>
-          <article class="competitor-card reveal"><span class="study-index">03 / MODA E ACESSÓRIOS</span><h3>Gucci</h3><p>Marca de moda e acessórios de luxo, reconhecida por campanhas visuais e uma identidade criativa própria.</p><span class="competitor-footer">Vestuário · Acessórios · Imagem</span></article>
-          <article class="competitor-card reveal"><span class="study-index">04 / MODA E DESIGN</span><h3>Prada</h3><p>Concorrente em vestuário, malas e acessórios, com uma abordagem de design e uma linguagem visual distinta.</p><span class="competitor-footer">Moda · Design · Acessórios</span></article>
+          <article class="competitor-card reveal"><span class="study-index">01 / MODA E BELEZA</span><h3>Christian Dior</h3><p>Concorrente em alta-costura, pronto-a-vestir, perfumes e cosmética. Aproxima-se da CHANEL pelo peso da tradição e da beleza.</p><span class="competitor-footer"><span>Moda · Perfumaria · Cosmética</span><span class="competitor-card-action">EXPLORAR <span aria-hidden="true">↗</span></span></span><button type="button" class="competitor-open" data-competitor="dior" aria-haspopup="dialog" aria-controls="competitor-dialog" aria-label="Conhecer a Dior e perceber porque concorre com a CHANEL"></button></article>
+          <article class="competitor-card reveal"><span class="study-index">02 / MODA E PELE</span><h3>Louis Vuitton</h3><p>Forte presença em malas, artigos de couro, acessórios e moda de luxo, com comunicação assente na imagem e na exclusividade.</p><span class="competitor-footer"><span>Malas · Artigos de couro · Moda</span><span class="competitor-card-action">EXPLORAR <span aria-hidden="true">↗</span></span></span><button type="button" class="competitor-open" data-competitor="louis-vuitton" aria-haspopup="dialog" aria-controls="competitor-dialog" aria-label="Conhecer a Louis Vuitton e perceber porque concorre com a CHANEL"></button></article>
+          <article class="competitor-card reveal"><span class="study-index">03 / MODA E ACESSÓRIOS</span><h3>Gucci</h3><p>Marca de moda e acessórios de luxo, reconhecida por campanhas visuais e uma identidade criativa própria.</p><span class="competitor-footer"><span>Vestuário · Acessórios · Imagem</span><span class="competitor-card-action">EXPLORAR <span aria-hidden="true">↗</span></span></span><button type="button" class="competitor-open" data-competitor="gucci" aria-haspopup="dialog" aria-controls="competitor-dialog" aria-label="Conhecer a Gucci e perceber porque concorre com a CHANEL"></button></article>
+          <article class="competitor-card reveal"><span class="study-index">04 / MODA E DESIGN</span><h3>Prada</h3><p>Concorrente em vestuário, malas e acessórios, com uma abordagem de design e uma linguagem visual distinta.</p><span class="competitor-footer"><span>Moda · Design · Acessórios</span><span class="competitor-card-action">EXPLORAR <span aria-hidden="true">↗</span></span></span><button type="button" class="competitor-open" data-competitor="prada" aria-haspopup="dialog" aria-controls="competitor-dialog" aria-label="Conhecer a Prada e perceber porque concorre com a CHANEL"></button></article>
         </div>
+        <dialog id="competitor-dialog" class="product-dialog competitor-dialog" aria-labelledby="competitor-dialog-title" aria-describedby="competitor-dialog-description">
+          <div class="product-dialog-layout competitor-dialog-layout">
+            <div class="competitor-dialog-art" aria-hidden="true">
+              <span class="competitor-art-top">ESTUDO DE MERCADO · 05 / 10</span>
+              <div class="competitor-art-core"><span id="competitor-art-number" class="competitor-art-number">01</span><span id="competitor-art-name" class="competitor-art-name">Dior</span><span class="competitor-art-rule"></span></div>
+              <span class="competitor-art-bottom">CHANEL × CONCORRÊNCIA<br>ANÁLISE COMPARATIVA</span>
+            </div>
+            <div class="dialog-copy competitor-dialog-copy">
+              <button type="button" id="competitor-dialog-close" class="dialog-close" aria-label="Fechar perfil do concorrente">FECHAR <span aria-hidden="true">×</span></button>
+              <p id="competitor-dialog-eyebrow" class="mini-label">ETAPA 1 · PRINCIPAIS CONCORRENTES</p>
+              <h2 id="competitor-dialog-title">Christian Dior</h2>
+              <div class="gold-divider"></div>
+              <p id="competitor-dialog-description" class="dialog-description"></p>
+              <h3 class="dialog-subheading">PORQUE É CONCORRENTE DA CHANEL?</h3>
+              <ul id="competitor-dialog-list" class="dialog-list"></ul>
+              <p id="competitor-dialog-takeaway" class="dialog-takeaway"></p>
+              <p class="competitor-dialog-source">Fonte sobre a marca: <a id="competitor-dialog-source" href="https://www.dior.com/en_int/fashion/the-house-of-dreams" target="_blank" rel="noopener noreferrer">Site oficial</a> · Comparação: análise do grupo</p>
+              <div class="dialog-footer"><span>TRABALHO DE GRUPO · ETAPA 01</span><button type="button" id="competitor-dialog-next">VER OUTRO CONCORRENTE <span aria-hidden="true">→</span></button></div>
+            </div>
+          </div>
+        </dialog>
         <div class="study-conclusion reveal"><strong>Conclusão:</strong> para se diferenciar, a CHANEL deve comunicar a sua identidade histórica, o trabalho artesanal e os elementos visuais que a tornam reconhecível.</div>
         <a href="#redes" class="next-chapter reveal"><span>ETAPA SEGUINTE</span><span class="next-line"></span><strong>06 — ESCOLHA DAS REDES SOCIAIS</strong><span aria-hidden="true">↘</span></a>
       </section>
@@ -1620,6 +1678,104 @@ networkDialog.addEventListener('close', () => {
   networkImage.removeAttribute('src');
   networkPriorFocus?.focus();
 });
+
+const competitorDetails = {
+  dior: {
+    number: '01', name: 'Christian Dior', display: 'Dior', origin: 'FRANÇA · 1946',
+    description: 'Fundada por Christian Dior em Paris, a Maison marcou a moda com o New Look de 1947. Hoje combina alta-costura, pronto-a-vestir, acessórios, perfumes e produtos de beleza.',
+    reasons: [
+      ['Moda de luxo', 'Disputa atenção e preferência nas coleções, desfiles e peças de pronto-a-vestir.'],
+      ['Beleza e perfumaria', 'Compete diretamente com as fragrâncias, a maquilhagem e o universo de beleza da CHANEL.'],
+      ['Prestígio e comunicação', 'Ambas recorrem à história da Maison, aos códigos visuais e a campanhas de grande impacto.']
+    ],
+    distinction: 'A Dior está ligada à silhueta do New Look; a CHANEL distingue-se por códigos como o tweed, a elegância depurada e a ideia de liberdade de movimento.',
+    sourceUrl: 'https://www.dior.com/en_int/fashion/the-house-of-dreams', sourceName: 'Dior · The House of Dreams'
+  },
+  'louis-vuitton': {
+    number: '02', name: 'Louis Vuitton', display: 'Louis Vuitton', origin: 'FRANÇA · 1854',
+    description: 'A casa francesa nasceu em 1854 com baús e artigos de viagem. A sua herança artesanal expandiu-se para malas, artigos de couro, acessórios e coleções de moda de luxo.',
+    reasons: [
+      ['Malas e acessórios', 'Disputa um dos segmentos mais importantes da CHANEL: carteiras, artigos de couro e acessórios de luxo.'],
+      ['Moda e exclusividade', 'Dirige-se a consumidores que valorizam criação, qualidade, prestígio e peças reconhecíveis.'],
+      ['Força da marca', 'A identidade visual e os artigos icónicos são centrais na comunicação de ambas as casas.']
+    ],
+    distinction: 'A Louis Vuitton apoia-se na tradição da viagem e no monograma LV; a CHANEL valoriza sobretudo a herança da alta-costura, o matelassé e a sua elegância intemporal.',
+    sourceUrl: 'https://eu.louisvuitton.com/eng-e1/magazine/articles/heritage', sourceName: 'Louis Vuitton · Heritage'
+  },
+  gucci: {
+    number: '03', name: 'Gucci', display: 'Gucci', origin: 'ITÁLIA · 1921',
+    description: 'Fundada por Guccio Gucci em Florença, em 1921, começou ligada à marroquinaria e aos artigos de viagem. Tornou-se uma referência de moda e acessórios de luxo italianos.',
+    reasons: [
+      ['Produtos semelhantes', 'Concorre com a CHANEL em malas, calçado, vestuário e acessórios de luxo.'],
+      ['Símbolos reconhecíveis', 'O monograma GG e outros elementos de marca reforçam o reconhecimento, tal como os códigos CHANEL.'],
+      ['Atenção digital', 'As campanhas de moda e a comunicação visual disputam o interesse de públicos globais.']
+    ],
+    distinction: 'A Gucci tende a explorar uma expressão visual mais eclética; a CHANEL assenta a sua diferenciação numa estética clássica, contida e facilmente identificável.',
+    sourceUrl: 'https://www.gucci.com/int/en/nst/history-of-gucci', sourceName: 'Gucci · História da Maison'
+  },
+  prada: {
+    number: '04', name: 'Prada', display: 'Prada', origin: 'ITÁLIA · 1913',
+    description: 'Criada por Mario Prada em Milão, em 1913, começou com artigos de viagem e couro. A marca desenvolveu-se no vestuário, calçado e acessórios, com uma identidade de design contemporâneo.',
+    reasons: [
+      ['Moda e marroquinaria', 'Compete nas malas, no pronto-a-vestir, no calçado e nos acessórios premium.'],
+      ['Posicionamento de luxo', 'Ambas associam os produtos a qualidade, criatividade, exclusividade e herança de marca.'],
+      ['Influência na moda', 'As coleções e campanhas procuram captar a atenção de consumidores interessados em design e tendências.']
+    ],
+    distinction: 'A Prada privilegia frequentemente a experimentação e a linguagem conceptual; a CHANEL aposta na continuidade dos seus códigos históricos e no saber-fazer da alta-costura.',
+    sourceUrl: 'https://www.pradagroup.com/content/dam/pradagroup/documents/Group_Profile/July_Company%20Profile%20Prada%20Group_luglio_ENG.pdf', sourceName: 'Prada Group · Company Profile'
+  }
+};
+
+const competitorDialog = document.getElementById('competitor-dialog');
+const competitorClose = document.getElementById('competitor-dialog-close');
+const competitorList = document.getElementById('competitor-dialog-list');
+const competitorKeys = Object.keys(competitorDetails);
+let currentCompetitor = 'dior';
+let competitorPriorFocus = null;
+
+function showCompetitorDetails(key) {
+  const details = competitorDetails[key];
+  if (!details) return;
+  currentCompetitor = key;
+  document.getElementById('competitor-art-number').textContent = details.number;
+  document.getElementById('competitor-art-name').textContent = details.display;
+  document.getElementById('competitor-dialog-eyebrow').textContent = `CONCORRENTE ${details.number} / 04 · ${details.origin}`;
+  document.getElementById('competitor-dialog-title').textContent = details.name;
+  document.getElementById('competitor-dialog-description').textContent = details.description;
+  competitorList.replaceChildren(...details.reasons.map(([name, explanation]) => {
+    const li = document.createElement('li');
+    const strong = document.createElement('strong');
+    strong.textContent = `${name}: `;
+    li.append(strong, document.createTextNode(explanation));
+    return li;
+  }));
+  const strong = document.createElement('strong');
+  strong.textContent = 'O que a distingue: ';
+  document.getElementById('competitor-dialog-takeaway').replaceChildren(strong, document.createTextNode(details.distinction));
+  const source = document.getElementById('competitor-dialog-source');
+  source.href = details.sourceUrl;
+  source.textContent = details.sourceName;
+}
+
+document.querySelectorAll('.competitor-open').forEach((button) => {
+  button.addEventListener('click', () => {
+    competitorPriorFocus = button;
+    showCompetitorDetails(button.dataset.competitor);
+    competitorDialog.showModal();
+    competitorClose.focus();
+  });
+});
+
+competitorClose.addEventListener('click', () => competitorDialog.close());
+document.getElementById('competitor-dialog-next').addEventListener('click', () => {
+  const nextIndex = (competitorKeys.indexOf(currentCompetitor) + 1) % competitorKeys.length;
+  showCompetitorDetails(competitorKeys[nextIndex]);
+  competitorClose.focus();
+});
+competitorDialog.addEventListener('click', (event) => {
+  if (event.target === competitorDialog) competitorDialog.close();
+});
+competitorDialog.addEventListener('close', () => competitorPriorFocus?.focus());
 
 </script>
 </body>
