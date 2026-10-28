@@ -860,6 +860,105 @@ body:has(.product-dialog[open]) { overflow: hidden; }
   .network-logo-tiktok { width: 174px; height: 174px; }
 }
 
+/* Experimental chapter 01 — archival research wall. The published main branch is untouched. */
+.chapter-one.mural-experiment { background: #f9f7f1; padding-top: 120px; }
+.mural-experiment > .chapter-heading,
+.mural-experiment > .chapter-one-layout { display: none; }
+.mural-experiment .mural-heading { text-align: center; max-width: 1120px; margin: 0 auto 15px; }
+.mural-experiment .mural-heading .section-title { font-size: clamp(54px, 6.1vw, 94px); margin: 17px auto 0; }
+.mural-experiment .mural-heading .section-title em { color: #a58748; }
+.mural-experiment .mural-heading .mini-label { margin-bottom: 14px; }
+.mural-intro { max-width: 750px; margin: 20px auto 15px; text-align: center; line-height: 1.8; color: #6c6358; font-size: 13px; }
+.mural-board { position: relative; isolation: isolate; height: clamp(710px, 70vw, 930px); max-width: 1480px; margin: 15px auto 0; background: radial-gradient(ellipse at 49% 40%, #fffdf7 0%, #f8f5ed 68%, #f1eadc 100%); }
+.mural-board::before { content: ''; position: absolute; inset: 18px; pointer-events: none; border: 1px solid rgba(165,135,72,.16); }
+.mural-board::after { content: 'MAISON · PARIS · 1910'; position: absolute; z-index: 2; bottom: 25px; left: 36px; color: #af9a70; font-size: 10px; letter-spacing: .28em; }
+.mural-thread-lines { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; overflow: visible; }
+.mural-thread-lines path { stroke: #b89a57; stroke-width: 1.4; fill: none; opacity: .85; }
+.mural-thread-lines circle { fill: #b99c60; stroke: #fff8eb; stroke-width: 1.3; }
+.mural-paper { position: absolute; z-index: 4; background: #fffcf4; box-shadow: 0 15px 36px rgba(54,44,24,.16), 1px 2px 0 rgba(155,123,61,.06); border: 1px solid rgba(181,158,117,.2); transform: rotate(var(--tilt, 0deg)); }
+.mural-paper::after { content: ''; pointer-events: none; position: absolute; inset: 0; opacity: .43; background: repeating-linear-gradient(0deg, transparent 0px, transparent 6px, rgba(145,117,75,.015) 7px); }
+.mural-pin { position: absolute; z-index: 8; top: -9px; left: 50%; transform: translateX(-50%); height: 20px; width: 20px; border-radius: 50%; background: radial-gradient(circle at 33% 28%, #ffe1a0 0%, #c79f4d 42%, #856527 83%); box-shadow: 1px 3px 4px rgba(50,35,15,.27); }
+.mural-note { padding: clamp(18px, 2.1vw, 31px); }
+.mural-note h3 { font-family: var(--serif); font-size: clamp(24px, 2.1vw, 35px); font-weight: 500; letter-spacing: .07em; margin: 0 0 13px; }
+.mural-note h3::after { content: ''; display: block; width: 37px; height: 1px; background: #b29459; margin-top: 12px; }
+.mural-note p { color: #49433a; font-family: var(--serif); font-size: clamp(19px, 1.7vw, 26px); font-style: italic; line-height: 1.16; margin: 0; }
+.mural-note small { display: block; margin-top: 13px; color: #84796b; line-height: 1.65; font-size: 10px; letter-spacing: .02em; }
+.mural-origin { left: 16%; top: 15%; width: 24%; --tilt: -2deg; }
+.mural-sector { left: 4%; top: 62%; width: 25%; --tilt: -3deg; }
+.mural-activity { right: 1%; top: 24%; width: 28%; --tilt: -1deg; }
+.mural-position { right: 3%; top: 72%; width: 28%; --tilt: 2deg; }
+.mural-photo { position: absolute; z-index: 1; padding: 9px 9px 24px; margin: 0; background: #fffcf4; box-shadow: 0 13px 31px rgba(46,38,25,.22); transform: rotate(var(--tilt, 0deg)); }
+.mural-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.04); }
+.mural-photo--paris { left: 1.5%; top: 13%; width: 25%; height: 31%; --tilt: -8deg; }
+.mural-photo--atelier { right: 2.4%; top: 8%; width: 22%; height: 30%; --tilt: 6deg; }
+.mural-photo--couture { left: 17%; bottom: 4.5%; width: 23%; height: 26%; --tilt: 5deg; }
+.mural-dossier { left: 35.5%; top: 12%; width: 33%; min-height: 70%; padding: 31px 27px 28px; margin: 0; text-align: center; --tilt: -1deg; z-index: 5; }
+.mural-dossier .mural-pin { top: -10px; }
+.mural-wordmark { display: block; font-family: Arial, Helvetica, sans-serif; font-size: clamp(27px, 3.2vw, 53px); font-weight: 700; letter-spacing: .19em; margin: 9px 0 10px .19em; }
+.mural-submark { display: block; font-family: var(--serif); font-size: clamp(20px, 2vw, 29px); font-style: italic; margin: 0 0 23px; }
+.mural-hairline { width: 44px; height: 1px; display: block; background: #b39a65; margin: 0 auto 20px; }
+.mural-dossier img { height: clamp(250px, 31vw, 420px); object-fit: cover; object-position: center 25%; filter: grayscale(1) contrast(.98); }
+.mural-dossier figcaption { font-family: var(--serif); font-style: italic; color: #88795c; font-size: 18px; margin-top: 16px; }
+.mural-dossier figcaption a { color: #8b7349; font-size: 10px; font-family: var(--sans); font-style: normal; text-decoration: underline; text-underline-offset: 3px; }
+.mural-context { max-width: 1120px; margin: 20px auto 70px; border-top: 1px solid #decda8; padding: 30px 18px 0; display: grid; grid-template-columns: 180px 1fr; gap: 45px; }
+.mural-context-label { color: #a58748; font-size: 10px; font-weight: 700; letter-spacing: .19em; }
+.mural-context p { line-height: 1.9; font-size: 14px; color: #625b51; max-width: 850px; margin-bottom: 10px; }
+.mural-history-title { text-align: center; margin: 20px auto 29px; font-family: var(--serif); font-size: clamp(38px, 4.3vw, 64px); font-weight: 500; }
+.mural-history-title em { color: #a58748; font-weight: 400; }
+.mural-history { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(15px, 2vw, 32px); max-width: 1140px; margin: 0 auto; }
+.mural-history article { position: relative; padding: 31px 30px 36px; min-height: 200px; background: #fffdf8; box-shadow: 0 14px 32px rgba(59, 51, 30, .07); border: 1px solid #e6d9c1; }
+.mural-history article::before { content: ''; position: absolute; left: 28px; right: 28px; top: 0; height: 2px; background: #b7a072; }
+.mural-history-year { display: block; font-family: var(--serif); font-size: 48px; line-height: 1; color: #a58748; }
+.mural-history h3 { font-family: var(--serif); font-size: 28px; font-weight: 600; margin: 13px 0 8px; }
+.mural-history p { color: #726a5e; font-size: 12px; line-height: 1.8; margin: 0; }
+@media (max-width: 950px) {
+  .mural-experiment .mural-heading .section-title { font-size: clamp(49px, 8.4vw, 78px); }
+  .mural-board { height: 800px; margin-left: -3vw; margin-right: -3vw; }
+  .mural-note { padding: 18px; }
+  .mural-note h3 { font-size: 26px; }
+  .mural-note p { font-size: 19px; }
+  .mural-dossier { width: 35%; left: 33%; }
+  .mural-origin { left: 10%; width: 29%; }
+  .mural-sector { width: 28%; }
+  .mural-activity { width: 31%; }
+  .mural-position { width: 31%; }
+  .mural-dossier img { height: 350px; }
+}
+@media (max-width: 680px) {
+  .chapter-one.mural-experiment { padding: 107px 6vw 60px; }
+  .mural-experiment .mural-heading .mini-label { font-size: 9px; }
+  .mural-experiment .mural-heading .section-title { font-size: clamp(48px, 12vw, 68px); }
+  .mural-intro { margin: 22px auto 30px; }
+  .mural-board { height: auto; background: transparent; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 17px; margin: 0; padding-top: 12px; }
+  .mural-board::before, .mural-board::after, .mural-thread-lines { display: none; }
+  .mural-paper, .mural-photo { position: relative; inset: auto; left: auto; right: auto; top: auto; bottom: auto; width: auto; min-height: 0; transform: none; }
+  .mural-photo { height: 210px; }
+  .mural-dossier { grid-column: 1 / -1; grid-row: 1; padding: 26px 32px 30px; }
+  .mural-dossier img { height: 345px; object-position: center 25%; }
+  .mural-wordmark { font-size: 45px; }
+  .mural-note h3 { font-size: 25px; }
+  .mural-note p { font-size: 20px; }
+  .mural-origin, .mural-sector, .mural-activity, .mural-position { min-height: 185px; }
+  .mural-origin { grid-column: 1; grid-row: 2; }
+  .mural-sector { grid-column: 2; grid-row: 2; }
+  .mural-activity { grid-column: 1; grid-row: 3; }
+  .mural-position { grid-column: 2; grid-row: 3; }
+  .mural-photo--paris { grid-column: 1; grid-row: 4; }
+  .mural-photo--atelier { grid-column: 2; grid-row: 4; }
+  .mural-photo--couture { display: none; }
+  .mural-context { display: block; margin: 36px 0 55px; padding: 27px 0 0; }
+  .mural-context-label { display: block; margin-bottom: 13px; }
+  .mural-history { grid-template-columns: 1fr; gap: 16px; }
+  .mural-history article { min-height: 0; }
+}
+@media (max-width: 400px) {
+  .mural-board { display: flex; flex-direction: column; }
+  .mural-dossier, .mural-photo--paris, .mural-photo--atelier { width: 100%; }
+  .mural-dossier img { height: 290px; }
+  .mural-photo { height: 210px; }
+  .mural-origin, .mural-sector, .mural-activity, .mural-position { min-height: 0; }
+}
+
 </style>
     
   </head>
@@ -935,7 +1034,83 @@ body:has(.product-dialog[open]) { overflow: hidden; }
         <div class="vertical-note">MAISON CHANEL / UMA IDENTIDADE SINGULAR</div>
       </section>
 
-      <section class="chapter chapter-one stage" id="essencia" data-chapter="01" aria-labelledby="essencia-title">
+      <section class="chapter chapter-one mural-experiment stage" id="essencia" data-chapter="01" aria-labelledby="essencia-mural-title">
+        <div class="mural-heading">
+          <p class="mini-label reveal">QUESTÃO 01 · QUE EMPRESA É A CHANEL?</p>
+          <h2 id="essencia-mural-title" class="section-title reveal">Caracterização <em>da empresa.</em></h2>
+          <p class="mural-intro reveal">Uma viagem pelos documentos, imagens e momentos que explicam como uma boutique parisiense se tornou uma referência mundial no universo do luxo.</p>
+        </div>
+
+        <div class="mural-board" aria-label="Mural de pesquisa sobre a origem, o setor, a atividade e o posicionamento da CHANEL">
+          <svg class="mural-thread-lines" viewBox="0 0 1200 900" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M 350 175 L 620 355 L 920 245" />
+            <path d="M 205 595 L 620 355 L 960 705" />
+            <circle cx="350" cy="175" r="5" /><circle cx="620" cy="355" r="5" />
+            <circle cx="920" cy="245" r="5" /><circle cx="205" cy="595" r="5" />
+            <circle cx="960" cy="705" r="5" />
+          </svg>
+
+          <figure class="mural-photo mural-photo--paris" aria-hidden="true">
+            <img data-copy-img=".hero-image" alt="" loading="lazy" />
+          </figure>
+          <figure class="mural-photo mural-photo--atelier" aria-hidden="true">
+            <img data-copy-img=".audience-visual img" alt="" loading="lazy" />
+          </figure>
+          <figure class="mural-photo mural-photo--couture" aria-hidden="true">
+            <img data-copy-img=".product-visual img" alt="" loading="lazy" />
+          </figure>
+
+          <article class="mural-paper mural-note mural-origin reveal">
+            <span class="mural-pin" aria-hidden="true"></span>
+            <h3>ORIGEM</h3>
+            <p>Paris, França · 1910</p>
+            <small>Gabrielle “Coco” Chanel funda a Chanel Modes, uma boutique de chapéus na rue Cambon.</small>
+          </article>
+          <article class="mural-paper mural-note mural-sector reveal">
+            <span class="mural-pin" aria-hidden="true"></span>
+            <h3>SETOR</h3>
+            <p>Moda, beleza e luxo</p>
+            <small>Uma Maison com presença em diferentes categorias do mercado premium.</small>
+          </article>
+
+          <figure class="mural-paper mural-dossier reveal">
+            <span class="mural-pin" aria-hidden="true"></span>
+            <strong class="mural-wordmark">CHANEL</strong>
+            <span class="mural-submark">Maison francesa de luxo</span>
+            <span class="mural-hairline" aria-hidden="true"></span>
+            <img data-copy-img=".history-visual img" alt="Fotografia histórica de Gabrielle Chanel no atelier" loading="lazy" />
+            <figcaption>Gabrielle Chanel<br /><a href="https://www.chanel.com/us/about-chanel/gabrielle-chanel/" target="_blank" rel="noopener noreferrer">Fonte: CHANEL · Fotografia de Roger Schall</a></figcaption>
+          </figure>
+
+          <article class="mural-paper mural-note mural-activity reveal">
+            <span class="mural-pin" aria-hidden="true"></span>
+            <h3>ATIVIDADE</h3>
+            <p>Criação e venda de produtos de luxo</p>
+            <small>Alta-costura, pronto-a-vestir, acessórios, perfumes, cosmética, relojoaria e joalharia.</small>
+          </article>
+          <article class="mural-paper mural-note mural-position reveal">
+            <span class="mural-pin" aria-hidden="true"></span>
+            <h3>POSICIONAMENTO</h3>
+            <p>Elegância intemporal</p>
+            <small>Exclusividade, qualidade dos materiais, tradição e saber-fazer artesanal.</small>
+          </article>
+        </div>
+
+        <div class="mural-context reveal">
+          <span class="mural-context-label">A IDENTIDADE DA MAISON</span>
+          <div>
+            <p>Fundada por Gabrielle Chanel em Paris, em 1910, a marca começou com uma boutique de chapéus. Ao longo do século XX, expandiu-se para a moda, a perfumaria, os acessórios e outras categorias de luxo, tornando-se uma das casas mais reconhecidas internacionalmente.</p>
+            <p>A CHANEL distingue-se pela combinação da herança histórica com inovação criativa. Os seus códigos — como o tweed, as pérolas, o preto e branco e o perfume N°5 — ajudam a construir uma identidade imediatamente reconhecível.</p>
+          </div>
+        </div>
+
+        <h3 class="mural-history-title reveal">Três momentos <em>da história.</em></h3>
+        <div class="mural-history">
+          <article class="reveal"><span class="mural-history-year">1910</span><h3>O início</h3><p>Gabrielle Chanel abre a boutique de chapéus Chanel Modes, na rue Cambon, em Paris.</p></article>
+          <article class="reveal"><span class="mural-history-year">1921</span><h3>Um ícone nasce</h3><p>É lançado o perfume CHANEL N°5, que se tornaria um dos produtos mais emblemáticos da marca.</p></article>
+          <article class="reveal"><span class="mural-history-year">1955</span><h3>Design funcional</h3><p>A mala 2.55 associa elegância à liberdade de movimento, um valor central no legado da Maison.</p></article>
+        </div>
+
         <div class="chapter-heading reveal">
           <div class="chapter-number"><span>01</span><span class="chapter-number-rule"></span><span>10</span></div>
           <p class="eyebrow">ETAPA 1 · CARACTERIZAÇÃO DA EMPRESA</p>
@@ -1366,6 +1541,13 @@ body:has(.product-dialog[open]) { overflow: hidden; }
     <div class="presentation-hud" aria-live="polite"><span>SECÇÃO</span><strong id="hud-chapter">00</strong><span class="hud-separator">/</span><span>10</span></div>
   <script>
 document.documentElement.classList.add('js');
+
+// Reuse the photographs already embedded in this presentation so the experiment
+// remains a single offline-capable HTML file, with no new external image assets.
+document.querySelectorAll('[data-copy-img]').forEach(image => {
+  const original = document.querySelector(image.dataset.copyImg);
+  if (original?.getAttribute('src')) image.src = original.getAttribute('src');
+});
 
 const sections = [...document.querySelectorAll('.stage')];
 const progress = document.getElementById('scroll-progress');
