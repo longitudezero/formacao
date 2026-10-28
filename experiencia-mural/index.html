@@ -920,9 +920,6 @@ body:has(.product-dialog[open]) { overflow: hidden; }
 .m-portrait figcaption { display: flex; justify-content: space-between; align-items: center; gap: 8px; font: italic clamp(18px,1.8cqw,26px)/1.2 var(--serif); padding-top: 1.2cqw; color: #6f6045; text-align: left; }
 .m-portrait figcaption small { font: 500 clamp(8px,.7cqw,11px)/1.5 var(--sans); text-transform: uppercase; letter-spacing: .12em; text-align: right; max-width: 75px; }
 .m-handwriting { position: absolute; z-index: 3; left: 36%; top: 52%; font: italic 400 clamp(19px,2.1cqw,30px)/1.2 var(--serif); transform: rotate(-4deg); color: #8c7851; margin: 0; }
-.mural-foot { max-width: 1400px; margin: 38px auto 0; padding-top: 18px; border-top: 1px solid #cfbf9d; display: flex; justify-content: space-between; gap: 24px; color: #80735e; font-size: 10px; line-height: 1.7; }
-.mural-foot a { text-decoration: underline; text-underline-offset: 3px; }
-.mural-foot p { margin: 0; }
 .mural-experiment .next-chapter { max-width: 1400px; margin: 32px auto 0; }
 @media(min-width: 1700px) { .chapter-one.mural-experiment { padding-left: max(4.5vw,calc((100vw - 1520px)/2)); padding-right: max(4.5vw,calc((100vw - 1520px)/2)); } }
 @media(max-width: 1000px) {
@@ -945,7 +942,6 @@ body:has(.product-dialog[open]) { overflow: hidden; }
  .m-photo, .m-thread, .m-handwriting { display: none; }
  .m-codes { background-image: linear-gradient(#fffaf0ed,#fffaf0ed),var(--mural-tweed); background-size: cover; }
  .m-note { transform: rotate(calc(var(--r,0deg) * .45)); }
- .mural-foot { margin-top: 28px; }
 }
 @media(max-width: 560px) {
  .mural-experiment .mural-heading .mini-label { font-size: 9px; letter-spacing: .12em; }
@@ -959,7 +955,6 @@ body:has(.product-dialog[open]) { overflow: hidden; }
  .m-note { padding: 25px 28px; }
  .m-note p { font-size: 26px; }
  .m-note .m-detail,.m-milestone p { font-size: 14px; }
- .mural-foot { flex-direction: column; gap: 10px; padding-right: 20px; }
 }
 
 /* Restored company section. All changes are scoped to the experiment. */
@@ -975,25 +970,20 @@ body:has(.product-dialog[open]) { overflow: hidden; }
 .mural-open:focus-visible { outline: 0; }
 /* Floating mural over the existing blurred page. */
 .mural-dialog { position: fixed; inset: 0; width: min(1600px, calc(100vw - 32px)); height: calc(100dvh - 32px); max-width: none; max-height: none; margin: auto; padding: 0; overflow: hidden; border: 0; background: transparent; color: var(--ink); box-shadow: none; }
-.mural-dialog[open] { display: flex; flex-direction: column; }
+.mural-dialog[open] { display: flex; flex-direction: column; cursor: pointer; }
+.mural-dialog-scroll:focus-visible { outline: 0; }
 .mural-dialog::backdrop { background: #17140fd9; backdrop-filter: blur(6px); }
 .mural-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
-.mural-close { position: absolute; top: 14px; right: 18px; z-index: 20; display: flex; align-items: center; gap: 13px; min-height: 44px; padding: 10px 14px; border: 1px solid #d9c7a3; background: #fffcf6; color: #7b6133; font-size: 10px; font-weight: 700; letter-spacing: .12em; cursor: pointer; box-shadow: 0 5px 18px #0002; }
-.mural-close span { font-size: 25px; line-height: .8; font-weight: 400; }
-.mural-close:hover { background: #f3ede0; }
 .mural-dialog-scroll { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: transparent; }
 .mural-dialog .mural-experiment { padding: 18px 3vw 32px; background: transparent; }
 .mural-dialog .mural-board { background: transparent; }
 .mural-dialog .mural-board::before { content: none; }
-.mural-dialog .mural-foot { color: #e2d8c5; border-color: #bca97d66; }
-.mural-dialog .mural-foot a { color: #e3c78e; }
 body.mural-is-open { overflow: hidden; }
 @media (max-width: 1000px) {
   .mural-dialog .mural-experiment { padding: 52px 5vw 32px; }
 }
 @media (max-width: 560px) {
   .mural-dialog { width: 100vw; height: 100dvh; }
-  .mural-close { top: 12px; right: 16px; gap: 8px; padding: 8px 12px; font-size: 9px; }
   .mural-dialog .mural-experiment { padding: 56px 6vw 28px; }
 }
 </style>
@@ -1501,10 +1491,10 @@ body.mural-is-open { overflow: hidden; }
 
     <div class="presentation-hud" aria-live="polite"><span>SECÇÃO</span><strong id="hud-chapter">00</strong><span class="hud-separator">/</span><span>10</span></div>
 
-    <dialog id="mural-dialog" class="mural-dialog" aria-labelledby="mural-dialog-title">
+    <dialog id="mural-dialog" class="mural-dialog" aria-labelledby="mural-dialog-title" aria-describedby="mural-dismiss-hint">
       <h2 id="mural-dialog-title" class="mural-sr-only">Mural CHANEL: origem, identidade e história</h2>
-      <button type="button" id="mural-close" class="mural-close" aria-label="Fechar mural" autofocus>FECHAR <span aria-hidden="true">×</span></button>
-      <div class="mural-dialog-scroll" tabindex="0" aria-label="Conteúdo do mural">
+      <p id="mural-dismiss-hint" class="mural-sr-only">Clique em qualquer ponto do mural ou prima Escape para fechar.</p>
+      <div class="mural-dialog-scroll" tabindex="0" autofocus aria-label="Conteúdo do mural">
         <div class="mural-experiment">
         <div class="mural-board" aria-label="Mural de pesquisa: origem, atividade, identidade e história da CHANEL">
           <svg class="m-thread" viewBox="0 0 1200 1053" preserveAspectRatio="none" aria-hidden="true">
@@ -1561,10 +1551,6 @@ body.mural-is-open { overflow: hidden; }
             <span class="m-pin" aria-hidden="true"></span><span class="m-kicker">A evolução</span>
             <h3>De Paris<br>para o mundo.</h3><p class="m-detail">Dos chapéus a várias categorias de luxo, com uma identidade reconhecível.</p>
           </article>
-        </div>
-        <div class="mural-foot">
-          <p>UMA MAISON · MÚLTIPLAS EXPRESSÕES · A MESMA IDENTIDADE</p>
-          <p>Referências: <a href="https://www.chanel.com/us/about-chanel/the-history/" target="_blank" rel="noopener noreferrer">CHANEL · História</a> · <a href="https://www.chanel.com/us/about-chanel/gabrielle-chanel/" target="_blank" rel="noopener noreferrer">Gabrielle Chanel</a> (fotografia: Roger Schall).<br>Recortes e texturas: materiais fornecidos para o trabalho. Frasco usado como imagem de ambiente.</p>
         </div>
       </div>
       </div>
@@ -2137,7 +2123,6 @@ objectiveDialog.addEventListener('close', () => objectivePriorFocus?.focus());
 // Company timeline opens the research wall without leaving the presentation.
 const muralDialog = document.getElementById('mural-dialog');
 const muralOpen = document.getElementById('mural-open');
-const muralClose = document.getElementById('mural-close');
 let muralPriorFocus = null;
 
 muralOpen.addEventListener('click', () => {
@@ -2145,15 +2130,10 @@ muralOpen.addEventListener('click', () => {
   muralDialog.showModal();
   document.body.classList.add('mural-is-open');
   muralDialog.querySelector('.mural-dialog-scroll').scrollTop = 0;
-  muralClose.focus({ preventScroll: true });
+  muralDialog.querySelector('.mural-dialog-scroll').focus({ preventScroll: true });
 });
-muralClose.addEventListener('click', () => muralDialog.close());
-muralDialog.addEventListener('click', (event) => {
-  if (event.target !== muralDialog) return;
-  const rect = muralDialog.getBoundingClientRect();
-  if (event.clientX < rect.left || event.clientX > rect.right ||
-      event.clientY < rect.top || event.clientY > rect.bottom) muralDialog.close();
-});
+// This dismissal rule is intentionally limited to the mural dialog.
+muralDialog.addEventListener('click', () => muralDialog.close());
 muralDialog.addEventListener('close', () => {
   document.body.classList.remove('mural-is-open');
   muralPriorFocus?.focus({ preventScroll: true });
