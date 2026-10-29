@@ -1674,7 +1674,7 @@ body.mural-is-open { overflow: hidden; }
             </div>
           </div>
         </dialog>
-        <div class="reflection-panel reveal"><span class="study-index">QUESTÃO DE REFLEXÃO</span><h3>Uma empresa precisa de estar em todas as redes para ter sucesso?</h3><p><strong>Não.</strong> O sucesso depende mais da presença nas plataformas certas, de conteúdos adaptados ao público e da avaliação dos resultados do que do número de contas abertas. Concentrar recursos no Instagram e no TikTok permite uma estratégia mais consistente.</p></div>
+        <div class="reflection-panel reveal"><span class="study-index">QUESTÃO DE REFLEXÃO</span><h3>Uma empresa precisa de estar em todas as redes para ter sucesso?</h3><p><strong>Não.</strong> O sucesso depende mais da presença nas plataformas certas, de conteúdos adaptados ao público e da avaliação dos resultados do que o número de contas abertas. Concentrar recursos no Instagram e no TikTok permite uma estratégia mais consistente.</p></div>
         <a href="#publicacoes" class="next-chapter reveal"><span>ETAPA SEGUINTE</span><span class="next-line"></span><strong>07 CRIAÇÃO DE CONTEÚDOS</strong><span aria-hidden="true">↘</span></a>
       </section>
 
@@ -1686,7 +1686,7 @@ body.mural-is-open { overflow: hidden; }
         <div class="study-intro reveal">
           <p class="mini-label">DUAS PROPOSTAS · DOIS OBJETIVOS</p>
           <h2 id="publicacoes-title" class="section-title">Publicações para <em>redes sociais.</em></h2>
-          <p>Uma publicação no Instagram para promover o CHANEL N°5 e uma proposta para TikTok que convida a escolher entre dois looks de alta-costura. Dois formatos, adaptados a objetivos diferentes.</p>
+          <p>Uma publicação no Instagram para promover o CHANEL N°5 e uma proposta para o TikTok que convida a escolher entre dois looks de alta-costura.</p>
         </div>
         <div class="publication-cards">
           <article class="publication-card reveal">
@@ -2135,7 +2135,7 @@ const publicationDetails = {
     description: "Objetivo: promover o CHANEL N°5, despertar interesse pelo perfume e incentivar visitas à página do produto.",
     imageAlt: "Mockup de publicação no Instagram com o perfume CHANEL N°5, legenda, hashtags e chamada para a ação.",
     imageCaption: "INSTAGRAM · CHANEL N°5",
-    copy: "Mais do que um perfume, uma assinatura. Descobre CHANEL N°5.",
+    copy: "Mais do que um perfume, uma assinatura. Descobre o CHANEL N°5.",
     hashtags: "#CHANEL #ChanelNo5 #Perfume",
     cta: "Conhece o perfume no link da bio.",
     note: "",
@@ -2208,15 +2208,27 @@ publicationDialog.addEventListener('close', () => {
 const networkDetails = {
   instagram: {
     number: '01',
-    title: 'Porque escolhemos o Instagram?',
-    description: 'Escolhemos o Instagram porque a CHANEL tem uma identidade visual forte. A plataforma permite mostrar coleções, perfumes e campanhas com uma estética cuidada, reforçando a notoriedade da marca e a ligação com consumidores atuais e aspiracionais.',
+    title: "Porque escolhemos o Instagram?",
+    description: "Escolhemos o Instagram porque a CHANEL tem uma identidade visual forte. A plataforma permite mostrar coleções, perfumes e campanhas com uma estética cuidada, reforçando a notoriedade da marca e a ligação com consumidores atuais e futuros.",
     advantages: [
-      ['Identidade e prestígio', 'Fotografias, carrosséis e vídeos valorizam a qualidade dos produtos e mantêm uma imagem editorial coerente.'],
-      ['Formatos complementares', 'O feed apresenta campanhas; os Reels mostram movimento e bastidores; as Stories permitem sondagens, perguntas e conteúdos mais próximos.'],
-      ['Relação com a comunidade', 'Comentários, partilhas e guardados ajudam a perceber quais os conteúdos que despertam interesse.'],
-      ['Ligação ao website', 'Chamadas para a ação e ligações disponíveis na plataforma podem encaminhar pessoas interessadas para produtos e coleções.']
+      [
+        "Identidade e prestígio",
+        "Fotografias, carrosséis e vídeos valorizam a qualidade dos produtos e mantêm uma imagem coerente."
+      ],
+      [
+        "Formatos complementares",
+        "O feed apresenta campanhas; os Reels mostram movimento e bastidores; os Stories permitem sondagens, perguntas e conteúdos mais próximos."
+      ],
+      [
+        "Relação com a comunidade",
+        "Comentários, partilhas e posts guardados ajudam a perceber quais os conteúdos que despertam interesse."
+      ],
+      [
+        "Ligação ao website",
+        "Chamadas para a ação e ligações disponíveis na plataforma podem encaminhar pessoas interessadas para produtos e coleções."
+      ]
     ],
-    takeaway: 'Papel estratégico: reforçar a imagem de luxo, inspirar desejo e manter uma relação próxima sem perder a exclusividade.',
+    takeaway: "Papel estratégico: reforçar a imagem de luxo, inspirar desejo e manter uma relação próxima sem perder a exclusividade.",
     imageSelector: 'img[data-placeholder="instagram"]',
     imageAlt: 'Imagem do perfil Instagram da CHANEL',
     imageCaption: 'INSTAGRAM',
@@ -2226,15 +2238,27 @@ const networkDetails = {
   },
   tiktok: {
     number: '02',
-    title: 'Porque escolhemos o TikTok?',
-    description: 'Escolhemos o TikTok como complemento ao Instagram. O vídeo curto e a descoberta de conteúdos por interesses oferecem uma oportunidade de apresentar o universo CHANEL a públicos mais jovens, incluindo pessoas que ainda não seguem a marca.',
+    title: "Porque escolhemos o TikTok?",
+    description: "Escolhemos o TikTok como complemento ao Instagram. O vídeo curto e a descoberta de conteúdos por interesses oferecem uma oportunidade de apresentar o universo CHANEL a públicos mais jovens, incluindo pessoas que ainda não seguem a marca.",
     advantages: [
-      ['Descoberta de novos públicos', 'A página Para Ti pode recomendar vídeos a pessoas interessadas em moda, beleza e cultura, mesmo que ainda não acompanhem a CHANEL.'],
-      ['Bastidores e autenticidade', 'Vídeos curtos podem mostrar ateliers, desfiles, técnicas artesanais e histórias por trás dos produtos.'],
-      ['Participação e criatividade', 'Comentários, formatos participativos e colaborações seletivas com criadores permitem novas formas de envolvimento.'],
-      ['Aprendizagem com resultados', 'Visualizações, retenção e interações ajudam a identificar temas e formatos que merecem continuidade.']
+      [
+        "Descoberta de novos públicos",
+        "A página \"Para Ti\" pode recomendar vídeos a pessoas interessadas em moda, beleza e cultura, mesmo que ainda não acompanhem a CHANEL."
+      ],
+      [
+        "Bastidores e autenticidade",
+        "Vídeos curtos podem mostrar ateliers, desfiles, técnicas artesanais e histórias por trás dos produtos."
+      ],
+      [
+        "Participação e criatividade",
+        "Comentários, formatos participativos e colaborações seletivas com criadores permitem novas formas de envolvimento."
+      ],
+      [
+        "Aprendizagem com resultados",
+        "Visualizações, retenção e interações ajudam a identificar temas e formatos que merecem continuidade."
+      ]
     ],
-    takeaway: 'Papel estratégico: aumentar a descoberta entre novas gerações e revelar o lado criativo e humano da Maison, mantendo uma linguagem sofisticada.',
+    takeaway: "Papel estratégico: aumentar a descoberta entre novas gerações e revelar o lado criativo e humano da marca, mantendo uma linguagem clara.",
     imageSelector: 'img[data-placeholder="tiktok"]',
     imageAlt: 'Fotografia editorial de bastidores de um desfile CHANEL',
     imageCaption: 'TIKTOK',
