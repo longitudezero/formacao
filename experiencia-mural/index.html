@@ -1289,6 +1289,17 @@ body.mural-is-open { overflow: hidden; }
   .analysis-before-mockup { width: min(420px, 100%); align-self: center; }
   .analysis-before-mockup img { max-height: none; }
 }
+
+/* Group credits beneath the closing thank-you. */
+.closing-authors { margin: 34px auto 32px; }
+.closing-authors-label { margin: 0 0 19px; color: #8a754f; font-size: 13px; line-height: 1.6; letter-spacing: .04em; }
+.closing-authors-names { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(12px, 3.5vw, 44px); width: min(720px, 100%); margin: 0 auto; color: #5d5140; font-size: clamp(14px, 1.4vw, 17px); line-height: 1.7; }
+.closing-authors-names > span { min-width: 0; }
+.closing-authors-separator { color: #b49a69; font-weight: 400; }
+@media (max-width: 640px) {
+  .closing-authors { margin: 28px auto; }
+  .closing-authors-label { margin-bottom: 16px; font-size: 12px; }
+}
 </style>
     
   </head>
@@ -1905,7 +1916,12 @@ body.mural-is-open { overflow: hidden; }
           <article class="improvement-card reveal"><span class="study-index">PROPOSTA 02 · CONVERSÃO</span><h3>Melhor percurso de compra</h3><p>Chamadas para a ação mais claras, ligações diretas às páginas de produto e análise contínua de cliques, visitas e vendas.</p></article>
         </div>
         <div class="study-conclusion reveal"><strong>Recomendação final:</strong> concentrar a comunicação no Instagram e no TikTok, acompanhar indicadores de interação e conversão e ajustar os conteúdos sem perder a exclusividade da marca.</div>
-        <div class="closing-panel reveal"><span class="closing-eyebrow">CHANEL · TRABALHO DE GRUPO</span><h2>Obrigado pela <em>atenção.</em></h2><p>Proposta de Gestão de Redes Sociais · Marketing Digital</p><div class="closing-next"><span>FIM DA APRESENTAÇÃO</span><strong>Questões e discussão com a turma</strong><span aria-hidden="true">✦</span></div></div>
+        <div class="closing-panel reveal"><span class="closing-eyebrow">CHANEL · TRABALHO DE GRUPO</span><h2>Obrigado pela <em>atenção.</em></h2>
+          <div class="closing-authors">
+            <p class="closing-authors-label">Trabalho realizado por:</p>
+            <p class="closing-authors-names"><span>António Santos</span><span class="closing-authors-separator" aria-hidden="true">|</span><span>Lara Reis</span><span class="closing-authors-separator" aria-hidden="true">|</span><span>Marisa Martins</span></p>
+          </div>
+          <p>Proposta de Gestão de Redes Sociais · Marketing Digital</p><div class="closing-next"><span>FIM DA APRESENTAÇÃO</span><strong>Questões e discussão com a turma</strong><span aria-hidden="true">✦</span></div></div>
       </section>
     </main>
 
