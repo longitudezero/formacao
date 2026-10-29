@@ -1193,10 +1193,9 @@ body.mural-is-open { overflow: hidden; }
 .analysis-dialog { width: min(960px, 94vw); max-height: 90dvh; }
 .analysis-dialog-shell { display: flex; flex-direction: column; max-height: 90dvh; }
 .analysis-dialog-heading { flex: none; padding: 27px 42px 24px; border-bottom: 1px solid #e5dac5; }
-.analysis-dialog-topline { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
+.analysis-dialog-topline { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 0; }
 .analysis-dialog-topline .mini-label { margin: 0; color: #92723a; font-size: 9px; letter-spacing: .13em; }
 .analysis-dialog-topline .dialog-close { position: static; flex: none; padding: 8px 0 8px 8px; }
-.analysis-dialog-heading h2 { margin: 0; color: #40372c; font-family: var(--serif); font-size: clamp(26px, 2.8vw, 37px); font-weight: 500; line-height: 1.18; letter-spacing: -.025em; }
 .analysis-dialog-body { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 27px 42px 30px; }
 .analysis-direct-answer { margin: 0 0 23px; color: #765c2e; font-family: var(--serif); font-size: clamp(25px, 2.5vw, 32px); line-height: 1.3; font-weight: 500; }
 .analysis-support > p { margin: 0 0 17px; color: #655e53; font-size: 14px; line-height: 1.85; }
@@ -1231,9 +1230,8 @@ body.mural-is-open { overflow: hidden; }
   .analysis-dialog { width: 94vw; max-height: 92dvh; overflow: hidden; }
   .analysis-dialog-shell { max-height: 92dvh; }
   .analysis-dialog-heading { padding: 17px 23px 20px; }
-  .analysis-dialog-topline { gap: 12px; margin-bottom: 17px; }
+  .analysis-dialog-topline { gap: 12px; margin-bottom: 0; }
   .analysis-dialog-topline .mini-label { font-size: 8px; line-height: 1.6; }
-  .analysis-dialog-heading h2 { font-size: 25px; }
   .analysis-dialog-body { padding: 23px; }
   .analysis-direct-answer { font-size: 25px; }
   .analysis-support > p { font-size: 13px; }
@@ -1844,14 +1842,13 @@ body.mural-is-open { overflow: hidden; }
             </button>
           </article>
         </div>
-        <dialog id="analysis-dialog" class="product-dialog analysis-dialog" aria-labelledby="analysis-dialog-title" aria-describedby="analysis-dialog-answer">
+        <dialog id="analysis-dialog" class="product-dialog analysis-dialog" aria-label="Resposta de análise crítica" aria-describedby="analysis-dialog-answer">
           <div class="analysis-dialog-shell">
             <header class="analysis-dialog-heading">
               <div class="analysis-dialog-topline">
                 <p class="mini-label" id="analysis-dialog-eyebrow">ETAPA 4 · ANÁLISE CRÍTICA</p>
                 <button type="button" id="analysis-dialog-close" class="dialog-close" aria-label="Fechar resposta">FECHAR <span aria-hidden="true">×</span></button>
               </div>
-              <h2 id="analysis-dialog-title">Questão do enunciado</h2>
             </header>
             <div class="analysis-dialog-body">
               <p id="analysis-dialog-answer" class="analysis-direct-answer"></p>
@@ -2987,8 +2984,8 @@ const analysisDetails = [
     "number": "06",
     "cardTitle": "Como melhorar a publicação do N°5?",
     "question": "Escolham uma das publicações que criaram na Etapa Anterior e expliquem como poderiam melhorá-la para conseguir mais resultados.",
-    "answer": "Melhoraríamos a publicação do CHANEL N°5 no Instagram, transformando a imagem num Reel curto com um convite claro para conhecer o perfume.",
-    "support": "<div class=\"analysis-steps\"><div><span>01 · ABERTURA</span><h3>Captar a atenção</h3><p>Mostrar o frasco e um detalhe visual logo nos primeiros segundos.</p></div><div><span>02 · PRODUTO</span><h3>Despertar interesse</h3><p>Apresentar uma breve história ou demonstração, mantendo a identidade visual da campanha.</p></div><div><span>03 · AÇÃO</span><h3>Orientar o próximo passo</h3><p>Terminar com: «Conhece o perfume no link da bio.»</p></div></div><p>Testaríamos duas versões da abertura, alterando uma variável de cada vez. Compararíamos a <strong>retenção do vídeo, os cliques e as ações posteriores</strong> para perceber qual funciona melhor.</p><p>A mudança de formato é uma proposta a testar, sem garantia antecipada de mais vendas.</p>"
+    "answer": "A resposta a esta pergunta no caso do nosso grupo tem uma certa piada, porque nos realmente tinhamos uma proposta inicial que promovia o CHANEL N°5 através de uma imagem do perfume e de uma chamada para visitar o link da bio. Depois de a analisarmos, decidimos substituí-la por uma campanha participativa para o perfume fictício CHANEL N°78: Autumn breeze",
+    "support": "<p>Com esta alteração, procuramos aumentar os comentários, as partilhas e a curiosidade pelo produto, incentivando também visitas às boutiques para experimentar o perfume. O prémio reforça a ligação ao universo exclusivo da CHANEL.</p><p>Nota: Para perceber se a melhoria trouxe mais resultados, acompanharíamos o alcance, a interação e as visitas ao perfil ao longo da campanha.</p>"
   }
 ];
 const analysisDialog = document.getElementById('analysis-dialog');
@@ -3000,7 +2997,7 @@ function showAnalysisAnswer(index) {
   analysisIndex = (index + analysisDetails.length) % analysisDetails.length;
   const details = analysisDetails[analysisIndex];
   document.getElementById('analysis-dialog-eyebrow').textContent = 'ETAPA 4 · ANÁLISE CRÍTICA · ' + details.number + ' / 06';
-  document.getElementById('analysis-dialog-title').textContent = details.question;
+  analysisDialog.setAttribute('aria-label', 'Resposta ' + details.number + ' de 06 · Análise crítica');
   document.getElementById('analysis-dialog-answer').textContent = details.answer;
   document.getElementById('analysis-dialog-support').innerHTML = details.support;
   analysisDialog.querySelector('.analysis-dialog-body').scrollTop = 0;
