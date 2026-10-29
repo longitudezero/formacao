@@ -2302,47 +2302,83 @@ networkDialog.addEventListener('close', () => {
 
 const competitorDetails = {
   dior: {
-    number: '01', name: 'Christian Dior', display: 'Dior', origin: 'FRANÇA · 1946',
-    description: 'Fundada por Christian Dior em Paris, a Maison marcou a moda com o New Look de 1947. Hoje combina alta-costura, pronto-a-vestir, acessórios, perfumes e produtos de beleza.',
+    number: '01', name: "Dior", display: 'Dior', origin: 'FRANÇA · 1946',
+    description: "Fundada por Christian Dior em Paris, a marca marcou a moda com o New Look de 1947. Hoje combina alta-costura, pronto-a-vestir, acessórios, perfumes e produtos de beleza.",
     reasons: [
-      ['Moda de luxo', 'Disputa atenção e preferência nas coleções, desfiles e peças de pronto-a-vestir.'],
-      ['Beleza e perfumaria', 'Compete diretamente com as fragrâncias, a maquilhagem e o universo de beleza da CHANEL.'],
-      ['Prestígio e comunicação', 'Ambas recorrem à história da Maison, aos códigos visuais e a campanhas de grande impacto.']
+      [
+        "Moda de luxo",
+        "Disputa atenção e preferência nas coleções, desfiles e peças de pronto-a-vestir."
+      ],
+      [
+        "Beleza e perfumaria",
+        "Compete diretamente com as fragrâncias, a maquilhagem e o universo de beleza da CHANEL."
+      ],
+      [
+        "Prestígio e comunicação",
+        "Ambas recorrem à história da marca, aos códigos visuais e a campanhas de grande impacto."
+      ]
     ],
-    distinction: 'A Dior está ligada à silhueta do New Look; a CHANEL distingue-se por códigos como o tweed, a elegância depurada e a ideia de liberdade de movimento.',
+    distinction: "A Dior está ligada à silhueta do New Look; a CHANEL distingue-se por códigos como o tweed, a elegância depurada e a ideia de liberdade de movimento.",
     sourceUrl: 'https://www.dior.com/en_int/fashion/the-house-of-dreams', sourceName: 'Dior · The House of Dreams'
   },
   'louis-vuitton': {
     number: '02', name: 'Louis Vuitton', display: 'Louis Vuitton', origin: 'FRANÇA · 1854',
-    description: 'A casa francesa nasceu em 1854 com baús e artigos de viagem. A sua herança artesanal expandiu-se para malas, artigos de couro, acessórios e coleções de moda de luxo.',
+    description: "Nasceu em 1854 com baús e artigos de viagem. A sua herança artesanal expandiu-se para malas, artigos de couro, acessórios e coleções de moda de luxo.",
     reasons: [
-      ['Malas e acessórios', 'Disputa um dos segmentos mais importantes da CHANEL: carteiras, artigos de couro e acessórios de luxo.'],
-      ['Moda e exclusividade', 'Dirige-se a consumidores que valorizam criação, qualidade, prestígio e peças reconhecíveis.'],
-      ['Força da marca', 'A identidade visual e os artigos icónicos são centrais na comunicação de ambas as casas.']
+      [
+        "Malas e acessórios",
+        "Disputa um dos segmentos mais importantes da CHANEL: carteiras, artigos de couro e acessórios de luxo."
+      ],
+      [
+        "Moda e exclusividade",
+        "Dirige-se a consumidores que valorizam a criação, a qualidade, o prestígio e peças reconhecíveis."
+      ],
+      [
+        "Força da marca",
+        "A identidade visual e os artigos icónicos são centrais na comunicação de ambas as casas."
+      ]
     ],
-    distinction: 'A Louis Vuitton apoia-se na tradição da viagem e no monograma LV; a CHANEL valoriza sobretudo a herança da alta-costura, o matelassé e a sua elegância intemporal.',
+    distinction: "A Louis Vuitton apoia-se na tradição da viagem e no monograma LV; a CHANEL valoriza sobretudo a herança da alta-costura e a sua elegância intemporal.",
     sourceUrl: 'https://eu.louisvuitton.com/eng-e1/magazine/articles/heritage', sourceName: 'Louis Vuitton · Heritage'
   },
   gucci: {
-    number: '03', name: 'Gucci', display: 'Gucci', origin: 'ITÁLIA · 1921',
-    description: 'Fundada por Guccio Gucci em Florença, em 1921, começou ligada à marroquinaria e aos artigos de viagem. Tornou-se uma referência de moda e acessórios de luxo italianos.',
+    number: '03', name: "Gucci", display: 'Gucci', origin: 'ITÁLIA · 1921',
+    description: "Fundada por Guccio Gucci em Florença, em 1921, começou ligada à fabrico de artigos em couro e aos artigos de viagem. Tornou-se uma referência de moda e acessórios de luxo italianos.",
     reasons: [
-      ['Produtos semelhantes', 'Concorre com a CHANEL em malas, calçado, vestuário e acessórios de luxo.'],
-      ['Símbolos reconhecíveis', 'O monograma GG e outros elementos de marca reforçam o reconhecimento, tal como os códigos CHANEL.'],
-      ['Atenção digital', 'As campanhas de moda e a comunicação visual disputam o interesse de públicos globais.']
+      [
+        "Produtos semelhantes",
+        "Concorre com a CHANEL em malas, calçado, vestuário e acessórios de luxo."
+      ],
+      [
+        "Símbolos reconhecíveis",
+        "O monograma GG e outros elementos de marca reforçam o reconhecimento, tal como os códigos CHANEL."
+      ],
+      [
+        "Atenção digital",
+        "As campanhas de moda e a comunicação visual disputam o interesse de públicos globais."
+      ]
     ],
-    distinction: 'A Gucci tende a explorar uma expressão visual mais eclética; a CHANEL assenta a sua diferenciação numa estética clássica, contida e facilmente identificável.',
+    distinction: "A Gucci tende a explorar uma expressão visual mais versátil; a CHANEL assenta a sua diferenciação numa estética clássica, contida e facilmente identificável.",
     sourceUrl: 'https://www.gucci.com/int/en/nst/history-of-gucci', sourceName: 'Gucci · História da Maison'
   },
   prada: {
-    number: '04', name: 'Prada', display: 'Prada', origin: 'ITÁLIA · 1913',
-    description: 'Criada por Mario Prada em Milão, em 1913, começou com artigos de viagem e couro. A marca desenvolveu-se no vestuário, calçado e acessórios, com uma identidade de design contemporâneo.',
+    number: '04', name: "Prada", display: 'Prada', origin: 'ITÁLIA · 1913',
+    description: "Criada por Mario Prada em Milão, em 1913, começou com artigos de viagem e couro. A marca desenvolveu-se no vestuário, calçado e acessórios, com uma identidade de design contemporâneo.",
     reasons: [
-      ['Moda e marroquinaria', 'Compete nas malas, no pronto-a-vestir, no calçado e nos acessórios premium.'],
-      ['Posicionamento de luxo', 'Ambas associam os produtos a qualidade, criatividade, exclusividade e herança de marca.'],
-      ['Influência na moda', 'As coleções e campanhas procuram captar a atenção de consumidores interessados em design e tendências.']
+      [
+        "Moda e artigos em couro",
+        "Compete nas malas, no pronto-a-vestir, no calçado e nos acessórios premium."
+      ],
+      [
+        "Posicionamento de luxo",
+        "Ambas associam os produtos a qualidade, criatividade, exclusividade e herança da marca."
+      ],
+      [
+        "Influência na moda",
+        "As coleções e campanhas procuram captar a atenção de consumidores interessados em design e tendências."
+      ]
     ],
-    distinction: 'A Prada privilegia frequentemente a experimentação e a linguagem conceptual; a CHANEL aposta na continuidade dos seus códigos históricos e no saber-fazer da alta-costura.',
+    distinction: "A Prada privilegia frequentemente a experimentação e a linguagem conceptual; a CHANEL aposta na continuidade dos seus códigos históricos e no fabrico de alta-costura.",
     sourceUrl: 'https://www.pradagroup.com/content/dam/pradagroup/documents/Group_Profile/July_Company%20Profile%20Prada%20Group_luglio_ENG.pdf', sourceName: 'Prada Group · Company Profile'
   }
 };
@@ -2403,51 +2439,87 @@ competitorDialog.addEventListener('close', () => competitorPriorFocus?.focus());
 const objectiveDetails = {
   notoriedade: {
     number: '01', category: 'NOTORIEDADE', artName: 'Notoriedade',
-    title: 'Reforçar o reconhecimento global',
-    description: 'Escolhemos a notoriedade porque queremos que mais pessoas reconheçam a CHANEL quando encontram conteúdos de moda e beleza. A proposta é dar maior visibilidade aos códigos da Maison, como o tweed, a camélia, as malas acolchoadas e o CHANEL N°5, sem perder a identidade visual que a distingue.',
+    title: "Reforçar o reconhecimento global",
+    description: "Escolhemos a notoriedade porque queremos que mais pessoas reconheçam a CHANEL quando encontram conteúdos de moda e beleza. A proposta é dar maior visibilidade aos códigos da marca, como o tweed, a camélia, as malas acolchoadas e perfumes, sem perder a identidade visual que a distingue.",
     reasons: [
-      ['Mostrar os ícones', 'Usar carrosséis de peças emblemáticas, imagens de campanhas e pormenores das coleções para associar imediatamente esses elementos à CHANEL.'],
-      ['Alargar a descoberta', 'Publicar Reels de desfiles no Instagram e vídeos curtos de bastidores no TikTok para alcançar também quem ainda não segue a marca.'],
-      ['Criar memória de marca', 'Repetir cores, símbolos e linguagem editorial de forma consistente, para que o conteúdo seja identificado como CHANEL mesmo fora do perfil oficial.']
+      [
+        "Mostrar os ícones",
+        "Usar carrosséis de peças emblemáticas, imagens de campanhas e pormenores das coleções para associar imediatamente esses elementos à CHANEL."
+      ],
+      [
+        "Alargar a descoberta",
+        "Publicar Reels de desfiles no Instagram e vídeos curtos de bastidores no TikTok para alcançar também quem ainda não segue a marca."
+      ],
+      [
+        "Criar memória de marca",
+        "Repetir cores, símbolos e linguagem editorial de forma constante, para que o conteúdo seja identificado como CHANEL mesmo fora do perfil oficial."
+      ]
     ],
-    result: 'Que os públicos atuais e potenciais reconheçam a CHANEL e se lembrem das suas coleções e produtos.',
-    metrics: 'Alcance de não seguidores, visualizações dos vídeos e menções à marca; comparar a evolução entre publicações.'
+    result: "Que os públicos atuais e potenciais reconheçam a CHANEL e se lembrem das suas coleções e produtos.",
+    metrics: "Alcance de não seguidores, visualizações dos vídeos e menções à marca; comparar a evolução entre publicações."
   },
   identidade: {
     number: '02', category: 'IDENTIDADE', artName: 'Exclusividade',
-    title: 'Preservar a exclusividade',
-    description: 'Escolhemos preservar a exclusividade porque a CHANEL pretende continuar a ser percebida como uma casa de luxo, também nas redes sociais. O objetivo não é comunicar preços ou promoções constantes: é mostrar o cuidado, o saber-fazer e a história que justificam a diferença entre uma peça CHANEL e um produto de consumo massificado.',
+    title: "Preservar a exclusividade",
+    description: "Escolhemos preservar a exclusividade porque a CHANEL pretende continuar a ser percebida como uma casa de luxo, também nas redes sociais. O objetivo não é comunicar preços ou promoções constantes: é mostrar o cuidado, o saber-fazer e a história que justificam a diferença entre uma peça CHANEL e um outro produto.",
     reasons: [
-      ['Valorizar o trabalho artesanal', 'Mostrar o processo de criação de alta-costura, os ateliers, a seleção de materiais e os detalhes que normalmente não se veem numa campanha.'],
-      ['Proteger a imagem', 'Manter fotografias cuidadas, uma linguagem sóbria e uma frequência de conteúdos que privilegie qualidade em vez de publicações promocionais repetitivas.'],
-      ['Explicar o valor da marca', 'Contar histórias sobre o casaco de tweed, as malas icónicas e a herança de Gabrielle Chanel, para que o prestígio seja compreendido e não apenas anunciado.']
+      [
+        "Valorizar o trabalho artesanal",
+        "Mostrar o processo de criação de alta-costura, os ateliers, a seleção de materiais e os detalhes que normalmente não se veem numa campanha."
+      ],
+      [
+        "Proteger a imagem",
+        "Manter fotografias cuidadas, uma linguagem clara e uma frequência de conteúdos que privilegie qualidade em vez de publicações promocionais repetitivas."
+      ],
+      [
+        "Explicar o valor da marca",
+        "Contar histórias sobre o casaco de tweed, as malas icónicas e a herança de Gabrielle Chanel, para que o prestígio seja compreendido e não apenas anunciado."
+      ]
     ],
-    result: 'Que a comunicação digital aumente a admiração e o desejo pela CHANEL sem banalizar a sua imagem.',
-    metrics: 'Guardados e partilhas de conteúdos sobre o savoir-faire e comentários que revelem interesse pela história, qualidade e criação.'
+    result: "Que a comunicação digital aumente a admiração e o desejo pela CHANEL sem banalizar a sua imagem.",
+    metrics: "Guardados e partilhas de conteúdos sobre o savoir-faire e comentários que revelem interesse pela história, qualidade e criação."
   },
   geracoes: {
     number: '03', category: 'NOVOS PÚBLICOS', artName: 'Novas gerações',
-    title: 'Conquistar novas gerações',
-    description: 'Escolhemos este objetivo porque os jovens adultos podem começar a relacionar-se com a CHANEL muito antes de comprar uma peça de alta-costura. Perfumes, maquilhagem e vídeos de bastidores são portas de entrada para conhecer a Maison. Queremos gerar interesse e familiaridade agora, mantendo uma imagem de luxo a longo prazo.',
+    title: "Conquistar novas gerações",
+    description: "Escolhemos este objetivo porque os jovens adultos podem começar a relacionar-se com a CHANEL muito antes de comprar uma peça de alta-costura. Perfumes, maquilhagem e vídeos de bastidores são portas de entrada para conhecer a marca. Queremos gerar interesse e familiaridade, mantendo uma imagem de luxo a longo prazo.",
     reasons: [
-      ['Usar a linguagem dos formatos', 'No TikTok e nos Reels, mostrar pequenos momentos de desfiles, preparação de modelos e processos criativos com edição dinâmica, mas elegante.'],
-      ['Aproximar através da beleza', 'Dar destaque a perfumes como o CHANEL N°5 e a maquilhagem, temas que permitem descobrir o universo da marca sem começar pelas peças mais exclusivas.'],
-      ['Promover participação', 'Criar Stories com sondagens sobre dois looks de alta-costura e perguntas sobre estilos, convidando jovens adultos a interagir com a criatividade da CHANEL.']
+      [
+        "Usar a linguagem dos formatos",
+        "No TikTok e nos Reels, mostrar pequenos momentos de desfiles, preparação de modelos e processos criativos com edição dinâmica."
+      ],
+      [
+        "Aproximar através da beleza",
+        "Dar destaque a perfumes como o CHANEL N°5 e a maquilhagem, que permitem descobrir o universo da marca sem começar por conteudos exclusivos."
+      ],
+      [
+        "Promover participação",
+        "Criar Stories com sondagens sobre dois looks de alta-costura e perguntas sobre estilos, convidando jovens adultos a interagir com a criatividade da CHANEL."
+      ]
     ],
-    result: 'Que mais jovens adultos descubram e acompanhem a CHANEL, mesmo antes da primeira compra.',
-    metrics: 'Retenção de vídeos curtos, partilhas e respostas às Stories; analisar a faixa etária da audiência quando os dados estiverem disponíveis.'
+    result: "Que mais jovens adultos descubram e acompanhem a CHANEL, mesmo antes da primeira compra.",
+    metrics: "Retenção de vídeos curtos, partilhas e respostas aos Stories; analisar a faixa etária da audiência quando os dados estiverem disponíveis."
   },
   trafego: {
     number: '04', category: 'TRÁFEGO', artName: 'Visitas',
-    title: 'Gerar visitas qualificadas',
-    description: 'Escolhemos gerar visitas qualificadas porque a CHANEL não pretende apenas acumular gostos: quer que pessoas realmente interessadas avancem para conhecer as coleções, os perfumes e os pontos de venda. O objetivo é ligar a inspiração criada nas redes sociais ao website oficial e às boutiques, sem pressionar a compra.',
+    title: "Gerar visitas qualificadas",
+    description: "Escolhemos gerar visitas qualificadas porque a CHANEL não pretende apenas acumular gostos, mas sim que as que pessoas realmente interessadas avancem para conhecer as coleções, os perfumes e os pontos de venda. O objetivo é ligar a inspiração criada nas redes sociais ao website oficial e às boutiques, sem pressionar a compra.",
     reasons: [
-      ['Dar continuidade ao conteúdo', 'Depois de um Reel de uma coleção ou de uma publicação sobre CHANEL N°5, encaminhar o público para a respetiva página de produto ou coleção.'],
-      ['Facilitar a descoberta', 'Utilizar ligações em Stories e no perfil para ajudar quem procura informações sobre uma peça, um perfume ou uma boutique.'],
-      ['Distinguir interesse real de alcance', 'Avaliar se as publicações conduzem a visitas relevantes ao website e à exploração das coleções, em vez de considerar qualquer visualização uma intenção de compra.']
+      [
+        "Dar continuidade ao conteúdo",
+        "Depois de um Reel de uma coleção ou de uma publicação, encaminhar o público para a respetiva página de produto ou coleção."
+      ],
+      [
+        "Facilitar a descoberta",
+        "Utilizar ligações em Stories e no perfil para ajudar quem procura informações sobre uma peça, um perfume ou uma boutique."
+      ],
+      [
+        "Distinguir interesse real de alcance",
+        "Avaliar se as publicações conduzem a visitas relevantes ao website e à exploração das coleções, em vez de considerar qualquer visualização uma intenção de compra."
+      ]
     ],
-    result: 'Transformar curiosidade pelas publicações em pesquisa efetiva de produtos, coleções e locais de compra.',
-    metrics: 'Cliques nas ligações, visitas ao website provenientes das redes sociais, páginas de produto consultadas e conversões quando mensuráveis.'
+    result: "Transformar curiosidade pelas publicações em pesquisa efetiva de produtos, coleções e locais de compra.",
+    metrics: "Cliques nas ligações, visitas ao website provenientes das redes sociais, páginas de produto consultadas e conversões quando mensuráveis."
   }
 };
 
