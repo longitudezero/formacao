@@ -1379,6 +1379,70 @@ body.mural-is-open { overflow: hidden; }
   .smart-example p { font-size: 22px; }
 }
 
+
+/* A summary card compares CHANEL with the four competitors without changing their profiles. */
+.competitor-card.comparison-card { min-height: 0; margin-top: 20px; padding: 0; background: #f4efe4; border-color: #d6c39f; }
+.competitor-card.comparison-card h3 { margin: 0; font-size: clamp(29px, 3vw, 40px); line-height: 1.15; }
+.comparison-open { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; padding: 27px 34px; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.comparison-open em { color: #a17f3e; font-weight: 400; }
+.comparison-open > span[aria-hidden] { color: #98773c; font-size: 27px; }
+.comparison-open:focus-visible { outline: 3px solid #b58d4e; outline-offset: -5px; }
+.comparison-dialog { width: min(1240px, 96vw); max-height: 90dvh; }
+.comparison-dialog-shell { display: flex; flex-direction: column; max-height: 90dvh; }
+.comparison-dialog-heading { flex: none; padding: 24px 36px 23px; border-bottom: 1px solid #e4d6bb; background: #fffdf8; }
+.comparison-topline { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 17px; }
+.comparison-topline .mini-label { margin: 0; color: #94763e; font-size: 9px; letter-spacing: .14em; }
+.comparison-topline .dialog-close { position: static; flex: none; padding: 8px 0 8px 8px; }
+.comparison-dialog-heading h2 { margin: 0 0 13px; color: var(--ink); font-family: var(--serif); font-size: clamp(37px, 4vw, 55px); font-weight: 500; letter-spacing: -.035em; line-height: 1.02; }
+.comparison-dialog-heading h2 em { color: #a17f3e; font-weight: 400; }
+.comparison-dialog-heading > p { margin: 0; max-width: 900px; color: #7c7263; font-size: 12px; line-height: 1.75; }
+.comparison-dialog-body { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: start; gap: 32px; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 29px 36px 30px; }
+.comparison-data, .comparison-reading { min-width: 0; }
+.comparison-table-wrap { overflow-x: auto; }
+.comparison-table-wrap:focus-visible { outline: 2px solid #b58d4e; outline-offset: 4px; }
+.comparison-table { width: 100%; min-width: 560px; border-collapse: collapse; border: 1px solid #dfd2b8; }
+.comparison-table caption { padding: 0 0 17px; color: #92723a; text-align: left; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.comparison-table thead { background: #24211d; color: #e9d9b9; }
+.comparison-table thead th { padding: 15px 14px; font-size: 10px; font-weight: 600; line-height: 1.6; text-align: right; }
+.comparison-table thead th:first-child { text-align: left; }
+.comparison-table tbody th, .comparison-table td { padding: 15px 14px; border-bottom: 1px solid #e8dec9; }
+.comparison-table tbody th { text-align: left; color: #61523a; font-size: 13px; font-weight: 500; white-space: nowrap; }
+.comparison-table td { color: #6b6255; text-align: right; font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.comparison-table tbody tr:nth-child(odd) { background: #faf7ef; }
+.comparison-table tbody tr.comparison-chanel { background: #eee5d1; }
+.comparison-table .comparison-chanel th, .comparison-table .comparison-chanel td { color: #705426; font-weight: 700; }
+.comparison-data-note { margin: 15px 0 10px; color: #857963; font-size: 10px; line-height: 1.8; }
+.comparison-source { margin: 0; color: #93856f; font-size: 10px; line-height: 1.8; }
+.comparison-source a { color: #876a36; text-decoration: underline; text-underline-offset: 3px; }
+.comparison-reading > section { margin-bottom: 24px; }
+.comparison-reading .dialog-subheading { margin-bottom: 12px; font-size: 10px; line-height: 1.5; }
+.comparison-reading p { margin: 0; color: #716758; font-size: 13px; line-height: 1.85; }
+.comparison-reading strong { color: #665031; font-weight: 600; }
+.comparison-opportunity { padding: 20px 22px; border-left: 2px solid #aa8847; background: #f5efe2; }
+.comparison-opportunity .dialog-subheading { margin-bottom: 9px; }
+.comparison-opportunity p { font-family: var(--serif); color: #75603f; font-size: 23px; line-height: 1.35; }
+.comparison-dialog-footer { flex: none; margin: 0; padding: 16px 36px; background: #fffdf8; }
+@media (max-width: 1000px) {
+  .comparison-dialog-body { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .comparison-reading { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .comparison-reading > section { margin: 0; }
+  .comparison-opportunity { grid-column: 1 / -1; }
+}
+@media (max-width: 620px) {
+  .comparison-open { padding: 25px 28px; }
+  .comparison-dialog { width: 96vw; max-height: 92dvh; }
+  .comparison-dialog-shell { max-height: 92dvh; }
+  .comparison-dialog-heading { padding: 18px 23px 22px; }
+  .comparison-topline { gap: 12px; margin-bottom: 15px; }
+  .comparison-topline .mini-label { font-size: 8px; line-height: 1.7; }
+  .comparison-dialog-heading h2 { font-size: clamp(34px, 8vw, 43px); line-height: 1.05; }
+  .comparison-dialog-body { padding: 24px 23px; }
+  .comparison-reading { grid-template-columns: minmax(0, 1fr); }
+  .comparison-opportunity { grid-column: auto; padding: 19px; }
+  .comparison-opportunity p { font-size: 23px; }
+  .comparison-dialog-footer { padding: 14px 23px; }
+}
+
 </style>
     
   </head>
@@ -1773,6 +1837,12 @@ body.mural-is-open { overflow: hidden; }
           <article class="competitor-card reveal"><span class="study-index">03 / MODA E ACESSÓRIOS</span><h3>Gucci</h3><p>Marca de moda e acessórios de luxo, reconhecida por campanhas visuais e uma identidade criativa própria.</p><span class="competitor-footer"><span>Vestuário · Acessórios · Imagem</span></span><button type="button" class="competitor-open" data-competitor="gucci" aria-haspopup="dialog" aria-controls="competitor-dialog" aria-label="Conhecer a Gucci e perceber porque concorre com a CHANEL"></button></article>
           <article class="competitor-card reveal"><span class="study-index">04 / MODA E DESIGN</span><h3>Prada</h3><p>Concorrente em vestuário, malas e acessórios, com uma abordagem de design e uma linguagem visual distinta.</p><span class="competitor-footer"><span>Moda · Design · Acessórios</span></span><button type="button" class="competitor-open" data-competitor="prada" aria-haspopup="dialog" aria-controls="competitor-dialog" aria-label="Conhecer a Prada e perceber porque concorre com a CHANEL"></button></article>
         </div>
+
+        <article class="competitor-card comparison-card reveal">
+          <h3><button type="button" id="comparison-open" class="comparison-open" aria-haspopup="dialog" aria-controls="comparison-dialog">
+            <span>Comparação nas <em>redes sociais.</em></span><span aria-hidden="true">↗</span>
+          </button></h3>
+        </article>
         <dialog id="competitor-dialog" class="product-dialog competitor-dialog" aria-labelledby="competitor-dialog-title" aria-describedby="competitor-dialog-description">
           <div class="product-dialog-layout competitor-dialog-layout">
             <div class="competitor-dialog-visual">
@@ -1807,6 +1877,56 @@ body.mural-is-open { overflow: hidden; }
             </div>
           </div>
         </dialog>
+        <dialog id="comparison-dialog" class="product-dialog comparison-dialog" aria-labelledby="comparison-dialog-title" aria-describedby="comparison-dialog-description">
+          <div class="comparison-dialog-shell">
+            <header class="comparison-dialog-heading">
+              <div class="comparison-topline">
+                <p class="mini-label">ETAPA 1 · QUESTÃO 05 · ANÁLISE COMPARATIVA</p>
+                <button type="button" id="comparison-dialog-close" class="dialog-close" aria-label="Fechar comparação nas redes sociais">FECHAR <span aria-hidden="true">×</span></button>
+              </div>
+              <h2 id="comparison-dialog-title">CHANEL e a <em>concorrência.</em></h2>
+              <p id="comparison-dialog-description">Comparar a audiência, a visibilidade e a interação ajuda a interpretar a presença digital das cinco marcas.</p>
+            </header>
+            <div class="comparison-dialog-body">
+              <div class="comparison-data">
+                <div class="comparison-table-wrap" role="region" aria-label="Tabela das cinco marcas no Instagram" tabindex="0">
+                  <table class="comparison-table" aria-describedby="comparison-data-note">
+                    <caption>Comparação quantitativa · Instagram</caption>
+                    <thead><tr><th scope="col">Marca</th><th scope="col">Seguidores no Instagram</th><th scope="col">Visualizações em 30 dias*</th><th scope="col">Taxa de interação*</th></tr></thead>
+                    <tbody>
+                      <tr class="comparison-chanel"><th scope="row">CHANEL</th><td>59,1 M</td><td>136,5 M</td><td>2,5%</td></tr>
+                      <tr><th scope="row">Dior</th><td>46,7 M</td><td>119,3 M</td><td>3,3%</td></tr>
+                      <tr><th scope="row">Louis Vuitton</th><td>55,1 M</td><td>117,6 M</td><td>1,5%</td></tr>
+                      <tr><th scope="row">Gucci</th><td>50,6 M</td><td>64,9 M</td><td>2,3%</td></tr>
+                      <tr><th scope="row">Prada</th><td>33,6 M</td><td>41,5 M</td><td>1,9%</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p id="comparison-data-note" class="comparison-data-note">M = milhões. * Visualizações e taxas de interação: valores fornecidos para o trabalho, não confirmados na página pública consultada. O período exato e a fórmula de cálculo da taxa não foram indicados.</p>
+                <p class="comparison-source">Fonte dos seguidores: <a href="https://www.monitormentions.com/luxury-brands/instagram" target="_blank" rel="noopener noreferrer">Monitor Mentions · Luxury Brands on Instagram</a> · consulta em 02/11/2026.</p>
+              </div>
+              <div class="comparison-reading">
+                <section aria-labelledby="comparison-numbers-title">
+                  <h3 id="comparison-numbers-title" class="dialog-subheading">DIMENSÃO E INTERAÇÃO</h3>
+                  <p>Nos valores fornecidos, a <strong>CHANEL lidera em seguidores e visualizações</strong>. A Dior apresenta a maior taxa de interação: <strong>3,3%, face a 2,5% da CHANEL</strong>. Uma audiência maior não significa, por si só, uma taxa de interação superior.</p>
+                </section>
+                <section aria-labelledby="comparison-strategy-title">
+                  <h3 id="comparison-strategy-title" class="dialog-subheading">ESTRATÉGIAS DIGITAIS</h3>
+                  <p>Na leitura do grupo, a CHANEL realça elegância, tradição e exclusividade. Dior, Louis Vuitton, Gucci e Prada reforçam o seu posicionamento com diferentes apostas em celebridades, criatividade, conteúdos culturais e experiências digitais.</p>
+                </section>
+                <div class="comparison-opportunity">
+                  <h3 class="dialog-subheading">OPORTUNIDADE PARA A CHANEL</h3>
+                  <p>Equilibrar a imagem de luxo com formatos criativos e envolventes, adaptados a cada rede. Avaliar os seguidores em conjunto com a visibilidade, a interação e a relevância dos conteúdos.</p>
+                </div>
+              </div>
+            </div>
+            <footer class="dialog-footer comparison-dialog-footer">
+              <span>TRABALHO DE GRUPO · DADOS E ANÁLISE COMPARATIVA</span>
+              <button type="button" id="comparison-dialog-return">VOLTAR AOS CONCORRENTES <span aria-hidden="true">↗</span></button>
+            </footer>
+          </div>
+        </dialog>
+
         <div class="study-conclusion reveal"><strong>Conclusão:</strong> para se diferenciar, a CHANEL deve comunicar a sua identidade histórica, o trabalho artesanal e os elementos visuais que a tornam reconhecível.</div>
         <a href="#redes" class="next-chapter reveal"><span>ETAPA SEGUINTE</span><span class="next-line"></span><strong>06 ESCOLHA DAS REDES SOCIAIS</strong><span aria-hidden="true">↘</span></a>
       </section>
@@ -3092,6 +3212,26 @@ objectiveDialog.addEventListener('close', () => objectivePriorFocus?.focus());
   });
   close.addEventListener('click', () => dialog.close());
   document.getElementById('smart-dialog-return').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('close', () => trigger.focus());
+})();
+
+
+// The combined comparison has a separate dialog; individual brand panels stay unchanged.
+(function initializeCompetitorComparison() {
+  const trigger = document.getElementById('comparison-open');
+  const dialog = document.getElementById('comparison-dialog');
+  const close = document.getElementById('comparison-dialog-close');
+  trigger.addEventListener('click', () => {
+    dialog.showModal();
+    dialog.querySelector('.comparison-dialog-body').scrollTop = 0;
+    dialog.querySelector('.comparison-table-wrap').scrollLeft = 0;
+    close.focus();
+  });
+  close.addEventListener('click', () => dialog.close());
+  document.getElementById('comparison-dialog-return').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', (event) => {
     if (event.target === dialog) dialog.close();
   });
