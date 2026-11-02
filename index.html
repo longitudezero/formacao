@@ -1329,6 +1329,56 @@ body.mural-is-open { overflow: hidden; }
   .competitor-dialog[data-panel="social"] .competitor-dialog-copy h2 { font-size: clamp(39px, 10vw, 52px); }
 }
 
+
+/* SMART is a planning method below the four communication objectives. */
+.objective-card.smart-card { min-height: 0; margin-top: 20px; padding: 0; background: #f4efe4; border-color: #d6c39f; }
+.smart-open { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; padding: 27px 36px; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.objective-card.smart-card h3 { max-width: none; margin: 0; font-size: clamp(30px, 3vw, 40px); line-height: 1.1; }
+.smart-card h3 em { color: #a17f3e; font-weight: 400; }
+.smart-open > span[aria-hidden] { color: #98773c; font-size: 27px; }
+.smart-open:focus-visible { outline: 3px solid #b58d4e; outline-offset: -5px; }
+.smart-dialog { width: min(1100px, 95vw); }
+.smart-dialog-layout { grid-template-columns: minmax(0, 35%) minmax(0, 65%); }
+.smart-dialog-art { display: flex; flex-direction: column; justify-content: space-between; gap: 28px; padding: 38px 43px; background: #24211d; }
+.smart-art-letters { display: grid; gap: 15px; }
+.smart-art-letters > span { display: flex; align-items: center; gap: 24px; }
+.smart-art-letters b { width: 66px; font-family: var(--serif); font-size: 74px; line-height: .95; font-weight: 400; color: #e4d4b3; }
+.smart-art-letters small { color: #c5aa74; font-size: 10px; font-weight: 600; letter-spacing: .12em; }
+.smart-dialog-copy { padding: 60px 43px 26px; }
+.smart-dialog-copy h2 { font-size: clamp(41px, 4.3vw, 59px); line-height: 1; margin-bottom: 18px; }
+.smart-dialog-copy h2 em { color: #a17f3e; font-weight: 400; }
+.smart-dialog-copy .mini-label { margin-bottom: 17px; }
+.smart-dialog-copy .gold-divider { margin-bottom: 17px; }
+.smart-dialog-copy .dialog-description { font-size: 13px; line-height: 1.75; margin-bottom: 19px; }
+.smart-criteria { list-style: none; margin: 0 0 19px; padding: 0; }
+.smart-criteria li { display: grid; grid-template-columns: 25px minmax(0, 1fr); gap: 10px; margin-bottom: 11px; }
+.smart-criteria li:last-child { margin-bottom: 0; }
+.smart-criteria li > span { font-family: var(--serif); font-size: 25px; line-height: 1; color: #a17f3e; }
+.smart-criteria p { margin: 0; font-size: 12px; line-height: 1.65; color: #6b6255; }
+.smart-criteria strong { color: #705a36; }
+.smart-example { padding: 18px 21px; margin-bottom: 15px; border-left: 2px solid #ac8a48; background: #f5f0e5; }
+.smart-example .dialog-subheading { font-size: 9px; line-height: 1.6; margin-bottom: 9px; }
+.smart-example p { margin: 0; color: #66563e; font-family: var(--serif); font-size: 22px; line-height: 1.3; }
+.smart-example strong { font-weight: 500; color: #87672f; }
+.smart-check { margin: 0 0 14px; color: #7b705f; font-size: 11px; line-height: 1.7; }
+.smart-check strong { color: #705a36; }
+.smart-source { margin: 0 0 18px; color: #968a77; font-size: 9px; line-height: 1.6; }
+.smart-source a { color: #876b3b; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 760px) {
+  .smart-open { padding: 25px 28px; }
+  .smart-dialog { width: min(540px, 94vw); max-height: 92dvh; overflow-y: auto; }
+  .smart-dialog-layout { display: flex; flex-direction: column; height: auto; max-height: none; }
+  .smart-dialog-art { padding: 24px 28px; gap: 22px; }
+  .smart-art-letters { display: flex; justify-content: space-between; gap: 8px; }
+  .smart-art-letters > span { display: block; text-align: center; }
+  .smart-art-letters b { display: block; width: auto; font-size: clamp(37px, 9vw, 53px); }
+  .smart-art-letters small, .smart-dialog-art .objective-art-bottom { display: none; }
+  .smart-dialog-copy { overflow: visible; padding: 57px 28px 28px; }
+  .smart-dialog-copy h2 { font-size: clamp(38px, 9vw, 50px); }
+  .smart-example { padding: 17px 18px; }
+  .smart-example p { font-size: 22px; }
+}
+
 </style>
     
   </head>
@@ -1640,6 +1690,12 @@ body.mural-is-open { overflow: hidden; }
           <article class="objective-card reveal"><span class="study-index">03 / NOVOS PÚBLICOS</span><h3>Conquistar novas gerações</h3><p>Usar vídeos curtos e conteúdos relevantes para despertar interesse entre jovens adultos, sobretudo no universo da beleza.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Retenção dos vídeos · interação jovem</strong></div><button type="button" class="objective-open" data-objective="geracoes" aria-haspopup="dialog" aria-controls="objective-dialog" aria-label="Conhecer a justificação do objetivo de conquistar novas gerações"></button></article>
           <article class="objective-card reveal"><span class="study-index">04 / TRÁFEGO</span><h3>Gerar visitas qualificadas</h3><p>Orientar pessoas interessadas para o website oficial e para as boutiques, aproximando a comunicação da intenção de compra.</p><div class="study-indicator"><span>COMO AVALIAR</span><strong>Cliques · visitas · conversões</strong></div><button type="button" class="objective-open" data-objective="trafego" aria-haspopup="dialog" aria-controls="objective-dialog" aria-label="Conhecer a justificação do objetivo de gerar visitas qualificadas"></button></article>
         </div>
+
+        <article class="objective-card smart-card reveal">
+          <h3><button type="button" id="smart-open" class="smart-open" aria-haspopup="dialog" aria-controls="smart-dialog">
+            <span>Objetivos <em>SMART</em></span><span aria-hidden="true">↗</span>
+          </button></h3>
+        </article>
         <dialog id="objective-dialog" class="product-dialog objective-dialog" aria-labelledby="objective-dialog-title" aria-describedby="objective-dialog-description">
           <div class="product-dialog-layout objective-dialog-layout">
             <div class="objective-dialog-art" aria-hidden="true">
@@ -1661,6 +1717,43 @@ body.mural-is-open { overflow: hidden; }
             </div>
           </div>
         </dialog>
+        <dialog id="smart-dialog" class="product-dialog smart-dialog" aria-labelledby="smart-dialog-title" aria-describedby="smart-dialog-description">
+          <div class="product-dialog-layout smart-dialog-layout">
+            <div class="smart-dialog-art" aria-hidden="true">
+              <span class="objective-art-top">ETAPA 1 · QUESTÃO 04</span>
+              <div class="smart-art-letters">
+                <span><b>S</b><small>ESPECÍFICO</small></span>
+                <span><b>M</b><small>MENSURÁVEL</small></span>
+                <span><b>A</b><small>ALCANÇÁVEL</small></span>
+                <span><b>R</b><small>RELEVANTE</small></span>
+                <span><b>T</b><small>COM PRAZO</small></span>
+              </div>
+              <span class="objective-art-bottom">DA ESTRATÉGIA<br>À AVALIAÇÃO DOS RESULTADOS</span>
+            </div>
+            <div class="dialog-copy smart-dialog-copy">
+              <button type="button" id="smart-dialog-close" class="dialog-close" aria-label="Fechar objetivos SMART">FECHAR <span aria-hidden="true">×</span></button>
+              <p class="mini-label">PLANEAMENTO · METAS E INDICADORES</p>
+              <h2 id="smart-dialog-title">Objetivos <em>SMART.</em></h2>
+              <div class="gold-divider"></div>
+              <p id="smart-dialog-description" class="dialog-description">Os quatro objetivos indicam a direção. O método SMART ajuda a transformá-los em metas claras, com indicadores e um prazo para avaliar o progresso.</p>
+              <ul class="smart-criteria" aria-label="Os cinco critérios SMART">
+                <li><span aria-hidden="true">S</span><p><strong>Específico.</strong> Definir o resultado e a rede: visitas ao website vindas do Instagram.</p></li>
+                <li><span aria-hidden="true">M</span><p><strong>Mensurável.</strong> Fixar o indicador, o ponto de partida e a meta: de 150 para 180 visitas, um aumento de 20%.</p></li>
+                <li><span aria-hidden="true">A</span><p><strong>Alcançável.</strong> Validar a meta com o histórico, o orçamento e os recursos disponíveis antes de a aprovar.</p></li>
+                <li><span aria-hidden="true">R</span><p><strong>Relevante.</strong> Ligar a meta ao objetivo de gerar visitas qualificadas para conhecer a coleção.</p></li>
+                <li><span aria-hidden="true">T</span><p><strong>Com prazo.</strong> Definir 30 dias para atingir a meta e acompanhar a evolução semanalmente.</p></li>
+              </ul>
+              <div class="smart-example">
+                <h3 class="dialog-subheading">EXEMPLO ACADÉMICO · APLICAÇÃO À CHANEL</h3>
+                <p>Nos próximos 30 dias, aumentar de <strong>150 para 180</strong> as visitas ao website provenientes do Instagram, com conteúdos sobre a coleção e ligações identificadas nos Stories e no perfil.</p>
+              </div>
+              <p class="smart-check"><strong>Como acompanhar:</strong> atribuir um responsável e verificar semanalmente as visitas com origem nas ligações da campanha. As 150 visitas são a base do enunciado; a meta é uma proposta do grupo.</p>
+              <p class="smart-source">Método: <a href="https://www.atlassian.com/blog/teamwork/how-to-write-smart-goals" target="_blank" rel="noopener noreferrer">Atlassian · SMART goals</a>. Exemplo e aplicação: análise do grupo.</p>
+              <div class="dialog-footer"><span>TRABALHO DE GRUPO · ETAPA 01</span><button type="button" id="smart-dialog-return">VOLTAR AOS OBJETIVOS <span aria-hidden="true">↗</span></button></div>
+            </div>
+          </div>
+        </dialog>
+
         <a href="#concorrentes" class="next-chapter reveal"><span>PONTO SEGUINTE</span><span class="next-line"></span><strong>05 PRINCIPAIS CONCORRENTES</strong><span aria-hidden="true">↘</span></a>
       </section>
 
@@ -2984,6 +3077,26 @@ objectiveDialog.addEventListener('click', (event) => {
 });
 objectiveDialog.addEventListener('close', () => objectivePriorFocus?.focus());
 
+
+
+// SMART has its own dialog and keeps the four original objectives unchanged.
+(function initializeSmartObjectives() {
+  const trigger = document.getElementById('smart-open');
+  const dialog = document.getElementById('smart-dialog');
+  const close = document.getElementById('smart-dialog-close');
+  trigger.addEventListener('click', () => {
+    dialog.showModal();
+    dialog.scrollTop = 0;
+    dialog.querySelector('.smart-dialog-copy').scrollTop = 0;
+    close.focus();
+  });
+  close.addEventListener('click', () => dialog.close());
+  document.getElementById('smart-dialog-return').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('close', () => trigger.focus());
+})();
 
 // Company timeline opens the research wall without leaving the presentation.
 const muralDialog = document.getElementById('mural-dialog');
