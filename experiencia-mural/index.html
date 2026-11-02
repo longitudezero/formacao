@@ -1443,6 +1443,62 @@ body.mural-is-open { overflow: hidden; }
   .comparison-dialog-footer { padding: 14px 23px; }
 }
 
+
+/* The two audience segments open concise, illustrative personas. */
+.audience-profile-card { position: relative; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.audience-profile-card:hover, .audience-profile-card:focus-within { transform: translateY(-3px); border-color: #b99553; box-shadow: 0 18px 40px #4b392014; }
+.persona-open { appearance: none; position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.persona-open:focus-visible { outline: 3px solid #b58d4e; outline-offset: -5px; }
+.audience-persona-cta { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 23px; padding-top: 17px; border-top: 1px solid #d8c6a3; color: #8b7041; font-size: 9px; font-weight: 700; letter-spacing: .14em; }
+.audience-persona-cta > span:last-child { font-size: 22px; font-weight: 400; line-height: 1; }
+.audience-profile-luxury .audience-persona-cta { border-color: #75613e; color: #ddc99f; }
+.persona-dialog { width: min(1120px, 95vw); }
+.persona-dialog-layout { grid-template-columns: minmax(0, 43%) minmax(0, 57%); }
+.persona-dialog-media { display: flex; flex-direction: column; min-height: 0; min-width: 0; margin: 0; background: #24211d; }
+.persona-dialog-media > img { display: block; flex: 1 1 0; width: 100%; height: 0; min-height: 0; object-fit: cover; object-position: 50% 10%; }
+.persona-dialog[data-persona="ines"] .persona-dialog-media > img { object-position: 30% 40%; }
+.persona-dialog-media figcaption { flex: none; padding: 29px 33px 26px; background: #24211d; color: #e8d9b9; }
+.persona-segment-label { display: block; margin-bottom: 15px; color: #c8aa70; font-size: 9px; font-weight: 600; letter-spacing: .17em; }
+.persona-dialog-media figcaption p { margin: 0 0 22px; max-width: 400px; color: #f4ead9; font-family: var(--serif); font-size: clamp(28px, 2.65vw, 36px); font-weight: 400; line-height: 1.12; }
+.persona-dialog-media figcaption small { color: #b5a58b; font-size: 9px; line-height: 1.6; }
+.persona-dialog[data-persona="ines"] .persona-dialog-media figcaption { background: #ede4d3; }
+.persona-dialog[data-persona="ines"] .persona-segment-label { color: #98763c; }
+.persona-dialog[data-persona="ines"] .persona-dialog-media figcaption p { color: #6c5838; }
+.persona-dialog[data-persona="ines"] .persona-dialog-media figcaption small { color: #938269; }
+.persona-dialog-copy { padding: 62px 39px 27px; }
+.persona-dialog-copy .mini-label { margin-bottom: 17px; font-size: 9px; }
+.persona-dialog-copy h2 { font-size: clamp(48px, 4.9vw, 67px); line-height: 1; margin: 0 0 12px; }
+.persona-dialog-copy h2 em { color: #a17d3b; font-weight: 400; }
+.persona-meta { margin: 0 0 20px; color: #9c804c; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.persona-intro { margin: 0 0 24px; color: #6d6355; font-size: 14px; line-height: 1.8; }
+.persona-dialog-copy .dialog-subheading { margin: 0 0 9px; font-size: 9px; line-height: 1.5; }
+.persona-relationship { margin-bottom: 20px; }
+.persona-relationship p, .persona-priorities p { margin: 0; color: #7a6f5f; font-size: 12px; line-height: 1.8; }
+.persona-priorities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 18px 0; margin-bottom: 20px; border-top: 1px solid #e4d8bf; border-bottom: 1px solid #e4d8bf; }
+.persona-networks { margin-bottom: 22px; }
+.persona-channel-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.persona-channel-list li { padding: 7px 10px; border: 1px solid #d9c9aa; color: #8b7041; font-size: 10px; line-height: 1.4; }
+.persona-approach { padding: 17px 20px 19px; border-left: 2px solid #aa8747; margin-bottom: 22px; background: #f5efe2; }
+.persona-approach p { margin: 0; color: #79623f; font-family: var(--serif); font-size: 23px; line-height: 1.32; }
+.persona-dialog-copy .dialog-footer > span { font-size: 8px; }
+@media (max-width: 760px) {
+  .persona-dialog { width: min(540px, 94vw); max-height: 92dvh; overflow-y: auto; }
+  .persona-dialog-layout { display: flex; flex-direction: column; height: auto; max-height: none; }
+  .persona-dialog-media { flex: none; }
+  .persona-dialog-media > img { flex: none; height: min(42dvh, 365px); object-position: 50% 15%; }
+  .persona-dialog[data-persona="ines"] .persona-dialog-media > img { object-position: 40% 35%; }
+  .persona-dialog-media figcaption { padding: 23px 28px; }
+  .persona-dialog-media figcaption p { font-size: 29px; margin-bottom: 16px; }
+  .persona-dialog-copy { overflow: visible; padding: 57px 28px 28px; }
+  .persona-dialog-copy h2 { font-size: clamp(46px, 10vw, 59px); }
+  .persona-priorities { gap: 20px; }
+  .persona-approach p { font-size: 23px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .audience-profile-card { transition: none; }
+  .audience-profile-card:hover, .audience-profile-card:focus-within { transform: none; }
+}
+
 </style>
     
   </head>
@@ -1687,7 +1743,9 @@ body.mural-is-open { overflow: hidden; }
               <h3 id="audience-luxury-title">Consumidores de <em>luxo.</em></h3>
               <p class="audience-profile-description">Adultos com elevado poder aquisitivo, que procuram produtos exclusivos, qualidade e atendimento personalizado.</p>
               <div class="audience-profile-tags" aria-label="Valores do segmento principal"><span>EXCLUSIVIDADE</span><span>ATENDIMENTO PERSONALIZADO</span></div>
+              <div class="audience-persona-cta" aria-hidden="true"><span>CONHECER LARA REIS</span><span>↗</span></div>
             </div>
+            <button type="button" class="persona-open" data-persona="lara" aria-haspopup="dialog" aria-controls="persona-dialog" aria-label="Conhecer Lara Reis, persona do segmento principal"></button>
           </article>
 
           <article class="audience-profile-card audience-profile-aspirational reveal" aria-labelledby="audience-aspirational-title">
@@ -1699,9 +1757,49 @@ body.mural-is-open { overflow: hidden; }
               <h3 id="audience-aspirational-title">Público <em>aspiracional.</em></h3>
               <p class="audience-profile-description">Jovens adultos que acompanham a marca e se aproximam do seu universo através da cosmética, dos perfumes e das redes sociais.</p>
               <div class="audience-profile-tags" aria-label="Pontos de contacto do segmento complementar"><span>PERFUMES &amp; COSMÉTICA</span><span>REDES SOCIAIS</span></div>
+              <div class="audience-persona-cta" aria-hidden="true"><span>CONHECER INÊS ALMEIDA</span><span>↗</span></div>
             </div>
+            <button type="button" class="persona-open" data-persona="ines" aria-haspopup="dialog" aria-controls="persona-dialog" aria-label="Conhecer Inês Almeida, persona do segmento aspiracional"></button>
           </article>
         </div>
+
+
+        <dialog id="persona-dialog" class="product-dialog persona-dialog" aria-labelledby="persona-dialog-title" aria-describedby="persona-dialog-description">
+          <div class="product-dialog-layout persona-dialog-layout">
+            <figure class="persona-dialog-media">
+              <img id="persona-dialog-image" alt="" decoding="async">
+              <figcaption>
+                <span id="persona-dialog-segment" class="persona-segment-label">SEGMENTO PRINCIPAL</span>
+                <p id="persona-dialog-manifesto"></p>
+                <small>Imagem de referência · persona fictícia</small>
+              </figcaption>
+            </figure>
+            <div class="dialog-copy persona-dialog-copy">
+              <button type="button" id="persona-dialog-close" class="dialog-close" aria-label="Fechar persona">FECHAR <span aria-hidden="true">×</span></button>
+              <p id="persona-dialog-eyebrow" class="mini-label">PERSONA · CLIENTE HABITUAL DE LUXO</p>
+              <h2 id="persona-dialog-title"><span id="persona-dialog-name">Lara</span> <em id="persona-dialog-surname">Reis.</em></h2>
+              <p id="persona-dialog-meta" class="persona-meta"></p>
+              <p id="persona-dialog-description" class="persona-intro"></p>
+              <section class="persona-relationship" aria-labelledby="persona-relationship-title">
+                <h3 id="persona-relationship-title" class="dialog-subheading">RELAÇÃO COM A CHANEL</h3>
+                <p id="persona-dialog-relationship"></p>
+              </section>
+              <div class="persona-priorities">
+                <section aria-labelledby="persona-values-title"><h3 id="persona-values-title" class="dialog-subheading">O QUE VALORIZA</h3><p id="persona-dialog-values"></p></section>
+                <section aria-labelledby="persona-challenge-title"><h3 id="persona-challenge-title" class="dialog-subheading">PRINCIPAL DESAFIO</h3><p id="persona-dialog-challenge"></p></section>
+              </div>
+              <section class="persona-networks" aria-labelledby="persona-networks-title">
+                <h3 id="persona-networks-title" class="dialog-subheading">ONDE A ENCONTRAR</h3>
+                <ul id="persona-dialog-channels" class="persona-channel-list"></ul>
+              </section>
+              <section class="persona-approach" aria-labelledby="persona-approach-title">
+                <h3 id="persona-approach-title" class="dialog-subheading">COMO A ENVOLVER</h3>
+                <p id="persona-dialog-approach"></p>
+              </section>
+              <div class="dialog-footer"><span id="persona-dialog-counter">PERSONA 01 / 02 · PERFIL FICTÍCIO</span><button type="button" id="persona-dialog-next">VER OUTRA PERSONA <span aria-hidden="true">→</span></button></div>
+            </div>
+          </div>
+        </dialog>
 
         <div class="audience-facts-wrap">
           <h3 class="audience-facts-title reveal">Quatro critérios <em>de segmentação.</em></h3>
@@ -3236,6 +3334,110 @@ objectiveDialog.addEventListener('close', () => objectivePriorFocus?.focus());
     if (event.target === dialog) dialog.close();
   });
   dialog.addEventListener('close', () => trigger.focus());
+})();
+
+
+// Concise fictional personas supplied for the presentation; photographs are illustrative.
+const audiencePersonaDetails = {
+  "lara": {
+    "number": "01",
+    "name": "Lara",
+    "surname": "Reis",
+    "segment": "SEGMENTO PRINCIPAL",
+    "category": "CLIENTE HABITUAL DE LUXO",
+    "meta": "38 anos · Lisboa",
+    "description": "Empresária de design e branding, com uma vida ligada à arte, à moda e às viagens.",
+    "relationship": "Cliente habitual da CHANEL. Descobre coleções online e prefere comprar em boutique, com atendimento personalizado.",
+    "values": "Qualidade, tradição e exclusividade.",
+    "challenge": "Pouco tempo e expectativas elevadas de serviço.",
+    "channels": [
+      "Instagram",
+      "YouTube",
+      "Pinterest"
+    ],
+    "approach": "Mostrar o savoir-faire, as novas coleções e experiências exclusivas, com uma comunicação elegante e personalizada.",
+    "manifesto": "Qualidade, exclusividade e atenção ao detalhe.",
+    "imageSelector": ".audience-profile-luxury .audience-profile-photo img"
+  },
+  "ines": {
+    "number": "02",
+    "name": "Inês",
+    "surname": "Almeida",
+    "segment": "SEGMENTO COMPLEMENTAR",
+    "category": "CLIENTE ASPIRACIONAL",
+    "meta": "20 anos · Porto",
+    "description": "Designer gráfica em início de carreira. Acompanha moda, design e cultura para construir o seu estilo pessoal.",
+    "relationship": "Sonha com uma mala clássica, mas aproxima-se da marca através de perfumes e beleza, como COCO MADEMOISELLE.",
+    "values": "Independência, elegância e realização pessoal.",
+    "challenge": "Orçamento limitado: pesquisa, compara e poupa antes de comprar.",
+    "channels": [
+      "Instagram",
+      "TikTok",
+      "Pinterest"
+    ],
+    "approach": "Inspirar com perfumes, maquilhagem e vídeos de descoberta que liguem a CHANEL a conquistas pessoais.",
+    "manifesto": "Independência, elegância e conquista pessoal.",
+    "imageSelector": ".audience-profile-aspirational .audience-profile-photo img"
+  }
+};
+(function initializeAudiencePersonas() {
+  const dialog = document.getElementById('persona-dialog');
+  const image = document.getElementById('persona-dialog-image');
+  const close = document.getElementById('persona-dialog-close');
+  const keys = Object.keys(audiencePersonaDetails);
+  let currentPersona = 'lara';
+  let priorFocus = null;
+
+  function showPersona(key) {
+    const details = audiencePersonaDetails[key];
+    if (!details) return;
+    currentPersona = key;
+    dialog.dataset.persona = key;
+    const reference = document.querySelector(details.imageSelector);
+    image.src = reference.src;
+    image.alt = reference.alt;
+    document.getElementById('persona-dialog-segment').textContent = details.segment;
+    document.getElementById('persona-dialog-manifesto').textContent = details.manifesto;
+    document.getElementById('persona-dialog-eyebrow').textContent = `PERSONA · ${details.category}`;
+    document.getElementById('persona-dialog-name').textContent = details.name;
+    document.getElementById('persona-dialog-surname').textContent = `${details.surname}.`;
+    document.getElementById('persona-dialog-meta').textContent = details.meta;
+    document.getElementById('persona-dialog-description').textContent = details.description;
+    document.getElementById('persona-dialog-relationship').textContent = details.relationship;
+    document.getElementById('persona-dialog-values').textContent = details.values;
+    document.getElementById('persona-dialog-challenge').textContent = details.challenge;
+    document.getElementById('persona-dialog-approach').textContent = details.approach;
+    document.getElementById('persona-dialog-counter').textContent = `PERSONA ${details.number} / 02 · PERFIL FICTÍCIO`;
+    document.getElementById('persona-dialog-channels').replaceChildren(...details.channels.map((name) => {
+      const item = document.createElement('li');
+      item.textContent = name;
+      return item;
+    }));
+    dialog.querySelector('.persona-dialog-copy').scrollTop = 0;
+    dialog.scrollTop = 0;
+  }
+
+  document.querySelectorAll('.persona-open').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      priorFocus = trigger;
+      showPersona(trigger.dataset.persona);
+      dialog.showModal();
+      close.focus();
+    });
+  });
+  document.getElementById('persona-dialog-next').addEventListener('click', () => {
+    const next = (keys.indexOf(currentPersona) + 1) % keys.length;
+    showPersona(keys[next]);
+    close.focus();
+  });
+  close.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    image.removeAttribute('src');
+    priorFocus?.focus();
+  });
 })();
 
 // Company timeline opens the research wall without leaving the presentation.
